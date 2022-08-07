@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>4</title>
+</head>
+<body>
+    <h2 id="result"></h2>
+    <script>
+        let a =[];
+        let n = parseInt(prompt("Nhap kich thuoc mang: "))
+        for (let i=0; i<n; i++){
+            a[i] = parseInt(prompt("Nhap gia tri cua mang: "))
+        }
+        document.getElementById("result").innerHTML=a;
+        let b;
+        for (let i=0; i<(n+1)/2-1; i++){
+             b = a[i];
+             a[i] = a[n-i];
+             a[n-i] = b;
+        }
+        document.write(a.join(" "));
+    </script>
+</body>
+</html>

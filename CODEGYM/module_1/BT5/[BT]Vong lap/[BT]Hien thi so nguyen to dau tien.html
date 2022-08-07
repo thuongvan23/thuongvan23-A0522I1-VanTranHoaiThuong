@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[BT]hien thi 20 so nguyen to dau tien</title>
+</head>
+<body>
+    <script>
+            let count=1;
+            document.write("2<br>")
+            for (let a=3;a>1;a++) {
+                let flag=true;
+                if (count==20){break}
+                for (let i=2; i<a; i++){
+                    if (a%i==0){
+                        flag=false;
+                        break;
+                    }
+                }
+                if(flag){
+                    document.write(a+"<br>")
+                    count+=1
+                }
+            }
+    </script>
+</body>
+</html>

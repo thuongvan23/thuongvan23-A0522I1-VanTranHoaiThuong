@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chương trình quản lí sách</title>
+</head>
+<body>
+<h1>Quản lí sách</h1>
+<p id="display"></p>
+<script>
+    class sach {
+        constructor(masosach, ten, namxuatban, soquyen, tinhtrang) {
+            this.masosach = masosach;
+            this.ten = ten;
+            this.namxuatban = namxuatban;
+            this.soquyen = soquyen;
+            this.tinhtrang = tinhtrang;
+        }
+
+        getMasosach(masosach) {
+            return this.masosach;
+        }
+
+        getTen(ten) {
+            return this.ten;
+        }
+
+        getNamxuatban(namxuatban) {
+            return this.namxuatban;
+        }
+
+        getSoquyen(soquyen) {
+            return this.soquyen;
+        }
+
+        getTinhtrang(tinhtrang){
+            return this.tinhtrang;
+        }
+    }
+    let array = [];
+    display(array);
+
+    function display(array) {
+        let str = "<table border=\"1px\">\n" +
+            "  <tr>\n" +
+            "      <th>Mã số sách</th>\n" +
+            "      <th>Tên sách</th>\n" +
+            "      <th>Năm xuất bản</th>\n" +
+            "      <th>Số quyển</th>\n" +
+            "      <th>Tình trạng</th>\n" +
+            "  </tr>";
+        for (let i = 0; i < array.length; i++) {
+            str += "<tr>" +
+                "<td>" + array[i].getMasosach() + "</td>" +
+                "<td>" + array[i].getTen() + "</td>" +
+                "<td>" + array[i].getNamxuatban() + "</td>" +
+                "<td>" + array[i].getSoquyen() + "</td>" +
+                "<td>" + array[i].getTinhtrang() + "</td>" +
+                "</tr>"
+        }
+        str += "</table>";
+        document.getElementById("display").innerHTML = str;
+    }
+</script>
+<button>Thêm sách đã có</button>;
+<button>Thêm sách mới</button>;
+<button>Mượn sách</button>;
+<button>Hiển thị sách nhiều nhất</button>;
+</body>
+</html>

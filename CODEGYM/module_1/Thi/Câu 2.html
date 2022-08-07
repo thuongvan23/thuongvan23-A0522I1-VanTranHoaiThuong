@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2</title>
+</head>
+<body>
+    <script>
+        let dMy;
+        let day;
+        let month;
+        let year;
+        function checkinput() {
+            dMy = prompt("Nhập ngày tháng đúng định dạng sau: dd/MM/yyyy");
+            day = dMy[0]+dMy[1];
+            month = dMy[3]+dMy[4];
+            year = dMy[6]+dMy[7]+dMy[8]+dMy[9];
+            if (day==parseInt(day)&&month==parseInt(month)&&year==parseInt(year)&&dMy[2]=="/"&&dMy[5]=="/"){
+                leapyearornot();
+            } else {
+                alert("Yêu cầu nhập đúng định dạng dd/MM/yyy");
+            }
+        }
+        checkinput();
+        function leapyearornot() {
+            if((year % 4 == 0 && year % 100 != 0 ) || (year % 100 == 0 && year % 400 ==0))
+                alert(year + " là năm nhuận");
+            else alert(year + " không phải là năm nhuận");
+        }
+    </script>
+</body>
+</html>

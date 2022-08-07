@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5</title>
+</head>
+<body>
+    <ol>
+        <li>Cafe</li>
+        <li>Cam vắt</li>
+        <li>Nước ép cà rốt</li>
+        <li>Nước ép cà chua</li>
+        <li>Nước lọc</li>
+        <li>Nước dừa</li>
+        <li>Thoát gọi món</li>
+    </ol>
+    <h2 id="cash"></h2>
+    <button id="oder" onclick="call()">Gọi món</button>
+    <script>
+        let cash = 0 ;
+        let numofdrink;
+        function call() {
+            document.getElementById("cash")
+            for (let i=1; i>0; i++){
+            numofdrink = parseInt(prompt("Nhap so muon goi: "));
+            switch (numofdrink) {
+                case 1:
+                    cash += 10;
+                    break;
+                case 2:
+                    cash += 15;
+                    break;
+                case 3:
+                    cash += 20;
+                    break;
+                case 4:
+                    cash += 25;
+                    break;
+                case 5:
+                    cash += 30;
+                    break;
+                case 6:
+                    cash += 35;
+                    break;
+                case 7:
+                    let flag = confirm("Bạn đã oder hoàn tất?");
+                    if (flag){
+                    alert("Tong bill la: "+cash);} else {
+                        cash = 0;
+                        continue;
+                    }
+                    cash = 0;
+                    default:
+                        alert("Xin vui lòng nhập lại")
+                }
+            }
+        }
+    </script>
+</body>
+</html>

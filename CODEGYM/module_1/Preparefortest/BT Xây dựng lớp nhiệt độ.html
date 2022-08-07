@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT xây dựng lớp nhiệt độ</title>
+</head>
+<body>
+<script>
+    class Temperature{
+        constructor(c) {
+            this.c=c;
+        }
+        getFromCToF()
+        {
+            return  9/5*this.c+32;
+        }
+        getFromCToK()
+        {
+            return  parseInt(this.c)+273.15;
+        }
+    }
+
+    let  C=prompt("Nhap  nhiet do:");
+    while(true)
+    {
+        if(C<-273)
+        {
+            alert("Nhiet do  khong duoc be hon -273 yeu cau nhap  lai!!");
+            C=prompt("Nhap  nhiet do:");
+        }
+        // else if(C!=+(C))
+        // {
+        //     alert("Khong  xac dinh yeu cau nhap  lai!!");
+        //     C=prompt("Nhap  nhiet do:");
+        // }
+        // else
+        {
+            let temperature= new  Temperature(C);
+            let F= temperature.getFromCToF();
+            let K= temperature.getFromCToK();
+            alert(C+"°C= "+F+"°F="+K+"°K");
+            break;
+        }
+    }
+</script>
+</body>
+</html>

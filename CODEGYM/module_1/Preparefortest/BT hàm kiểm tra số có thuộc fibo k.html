@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1</title>
+</head>
+<body>
+    <script>
+        function checkfibo(num) {
+            let flag = false;
+            let n = 5*num*num-4;
+            let m = 5*num*num+4;
+            for (let i=0; i<=m; i++){
+                if (i*i==n ||  i*i==m){
+                    flag = true;
+                    break;
+                }
+            }
+            return flag;
+        }
+        let num = parseInt(prompt("Nhap 1 so bat ki: "));
+        if (checkfibo(num)){
+            alert(num + " thuoc day fibo")
+        }else {
+            alert(num + " khong thuoc day fibo")
+        }
+    </script>
+</body>
+</html>

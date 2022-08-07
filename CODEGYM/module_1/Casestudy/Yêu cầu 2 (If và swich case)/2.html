@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2</title>
+</head>
+<body>
+    <script>
+        let a = ["E", "U", "O", "A", "I", "e", "u", "o", "a", "i"];
+        let input = prompt("Nhap ki tu muon kiem tra: ");
+        let flag = false;
+        for (let i=0; i<a.length; i++){
+            if (input==a[i]){
+                flag = true;
+                break;
+            }
+        }
+        if (flag){
+            alert(input + " la nguyen am")
+        } else {
+            alert(input + " la phu am")
+        }
+    </script>
+</body>
+</html>

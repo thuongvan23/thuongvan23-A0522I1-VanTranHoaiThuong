@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>a</title>
+</head>
+<body>
+<button onclick="create()">Thêm mới sản phẩm</button>
+<p id="display"></p>
+<script>
+    class xe {
+        constructor(bienso, hoten, cmnd, phi) {
+            this.bienso = bienso;
+            this.hoten = hoten;
+            this.cmnd = cmnd;
+            this.phi = phi;
+        }
+
+        getBienso(bienso) {
+            return this.bienso;
+        }
+
+        getHoten(hoten) {
+            return this.hoten;
+        }
+
+        getCmnd(cmnd) {
+            return this.cmnd;
+        }
+
+        getPhi(phi) {
+            return this.phi;
+        }
+    }
+    let array = [];
+    display(array);
+
+    function display(array) {
+        let str = "<table border=\"1px\">\n" +
+            "  <tr>\n" +
+            "      <th>Biển số xe</th>\n" +
+            "      <th>Họ tên sinh viên</th>\n" +
+            "      <th>Chứng minh nhân dân</th>\n" +
+            "      <th>hãng xe máy</th>\n" +
+            "<th>phí gửi xe đã đóng</th>\n" +
+            "  </tr>";
+        for (let i = 0; i < array.length; i++) {
+            str += "<tr>" +
+                "<td>" + array[i].getBienso() + "</td>" +
+                "<td>" + array[i].getHoten() + "</td>" +
+                "<td>" + array[i].getCmnd() + "</td>" +
+                "<td>" +
+                "<select>" +
+                "<option>Honda</option>" +
+                "<option>Suzuki</option>" +
+                "<option>Hãng khác</option>" +
+                "</select> " +
+                "</td> "+
+                "<td>" + array[i].getPhi() + "</td>" +
+                "<td>" +
+                "<button onclick='edit(" + i + ")'>Sửa</button>" +
+                "<button onclick='remove(" + i + ")'>Xóa</button>" +
+                "</td>" +
+                "</tr>"
+        }
+        str += "</table>";
+        document.getElementById("display").innerHTML = str;
+    }
+
+
+
+
+    function create() {
+        do {
+            var bienso = prompt("Nhập biển số tối đa 20 ký tự");
+        }while (bienso.length > 20 );
+        do {
+            var hoten = prompt("Nhập Họ và Tên tối đa 40 ký tự");
+        }while (hoten.length > 40) ;
+        do {
+            var cmnd = prompt("Nhập cmnd");
+        }while (isNaN(cmnd));
+
+        do {
+            var phi = prompt("Nhập phí gửi xe");
+        }while (isNaN(phi));
+
+        let newxe = new xe(bienso,hoten,cmnd,phi);
+        array.push(newxe);
+        alert("Thêm mới thành công");
+        display(array);
+    }
+
+    function edit(value) {
+
+
+        do {
+            var bienso = prompt("Nhập biển số tối đa 20 ký tự");
+        }while (bienso.length > 20 );
+        do {
+            var hoten = prompt("Nhập Họ và Tên tối đa 40 ký tự");
+        }while (hoten.length > 40) ;
+        do {
+            var cmnd = prompt("Nhập cmnd");
+        }while (isNaN(cmnd));
+
+        do {
+            var phi = prompt("Nhập phí gửi xe");
+        }while (isNaN(phi));
+
+        let newxe = new xe(bienso,hoten,cmnd,phi);
+
+        array[value]= newxe;
+        alert("Sửa thành công");
+        display(array);
+    }
+
+    function remove(value) {
+        let abc = confirm("Bạn có muốn xóa không");
+        if(abc){
+            array.splice(value,1);
+            alert("xóa thành công");
+        }
+        display(array);
+    }
+</script>
+</body>
+</html>

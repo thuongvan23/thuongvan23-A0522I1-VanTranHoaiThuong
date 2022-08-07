@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bóng đèn</title>
+</head>
+<body>
+<div style="text-align: center">
+    <h1>BAT TAT BONG DEN</h1>
+    <img src="off.png"id="lamp">
+    <br>
+    <input type="button" value="TurnOnOrOff" onclick="bt()">
+    <p id="text"></p>
+</div>
+</body>
+<script>
+    class CongTac
+    {
+        constructor(status) {
+            this.status= status;
+        }
+        TurnOnOrOffSwitch()
+        {
+            if(this.status)
+            {
+                this.status=false;
+            }else
+            {
+                this.status= true;
+            }
+        }
+    }
+    class BongDen
+    {
+        constructor(congtac) {
+            this.congtac= congtac;
+        }
+        TurnOnOrOffLight()
+        {
+            if(this.congtac.status)
+            {
+                document.getElementById("lamp").src="on.png";
+                document.getElementById("text").innerText="Bong den da bat";
+            }
+            else
+            {
+                document.getElementById("lamp").src="off.png";
+                document.getElementById("text").innerText="Bong den da tat";
+            }
+        }
+
+    }
+    let congTac1= new CongTac(false);
+    let bongDen1= new BongDen(congTac1);
+    function bt() {
+        congTac1.TurnOnOrOffSwitch();
+        bongDen1.TurnOnOrOffLight();
+    }
+</script>
+</body>
+</html>

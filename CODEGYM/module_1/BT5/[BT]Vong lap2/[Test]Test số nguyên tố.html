@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[BT]Test số nguyên số</title>
+</head>
+<body>
+    <script>
+        let a = parseInt(prompt("Nhap so zo: "));
+        if (a==2){
+            alert("2 la so nguyen to")
+        } else{
+            let flag=true;
+            for (let i=2; i<a; i++){
+                if (a%i==0){
+                    flag=false;
+                    break;
+                }
+            }
+            if(flag){alert(a+" la so nguyen to")
+            }else { alert(a+" khong phai la so nguyen to")
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TH OOP xây dựng lớp hình tròn</title>
+</head>
+<body>
+    <script>
+        function circle(radius,color) {
+            this.radius = radius;
+            this.color = color;
+            this.getRadius = function () {
+                return this.radius;
+            }
+            this.setRadius = function (radius) {
+                this.radius = radius;
+            }
+            this.getArea = function () {
+                return 3.14*this.radius*this.radius;
+            }
+        }
+        let circle1 = new  circle(10, "red");
+        let radius = circle1.getRadius();
+        let area = circle1.getArea();
+        alert("radius: " + circle1.radius + "; area: " + area);
+    </script>
+</body>
+</html>

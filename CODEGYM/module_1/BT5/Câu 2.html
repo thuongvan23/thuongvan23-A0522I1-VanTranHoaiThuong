@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu 2</title>
+</head>
+<body>
+<script>
+    function perfectCoupleNumber1(number1, number2) {
+        let total1 = 0;
+        let total2 = 0;
+        let result = "";
+        for (let i = 1; i <= (number1 / 2); i++) {
+            if (number1 % i === 0) {
+                total1 += i;
+            }
+        }
+        for (let j = 1; j <= (number2 / 2); j++) {
+            if (number2 % j === 0) {
+                total2 += j;
+            }
+        }
+        if (total1 === number2 && total2 === number1) {
+            result = "True";
+        } else {
+            result = "False";
+        }
+        return result;
+    }
+
+    let number1 = parseInt(prompt("Nhập số thứ nhất"));
+    let number2 = parseInt(prompt("Nhập số thứ hai"));
+    let result = perfectCoupleNumber1(number1, number2);
+    alert(result);
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[BT]BT tu dien</title>
+</head>
+<body>
+    <h2>Translate to VietNamese</h2>
+    <input type="text" id="txt">
+    <button id="bu" onclick="trans()">Translate</button>
+    <script>
+        let en = ["dog", "cat", "blue", "red"]
+        let vn = ["chó", "mèo", "xanh", "đỏ"]
+        function trans() {
+            let flag = false;
+            let word = document.getElementById("txt").value;
+            // eo sai.
+            let a;
+            for (let i=0; i < en.length ; i++) {
+                if (word==en[i]){
+                    flag = true;
+                    a = i;
+                }
+            }
+            if (flag) {
+                alert(vn[a])
+            } else {alert("Tu dien chua co tu nay :v")}
+        }
+    </script>
+</body>
+</html>

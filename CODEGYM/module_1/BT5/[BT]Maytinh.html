@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[BT]Maytinh</title>
+</head>
+<body>
+<h2>CACULATOR</h2> <br>
+<input type="text" id="1">
+<input type="text" id="2"> <br> <br>
+<button onclick="cong()"> Addition(+) </button>
+<button onclick="tru()"> Subtraction(-) </button>
+<button onclick="nhan()"> Multiplication(x) </button>
+<button onclick="chia()"> Division(/) </button>
+
+<script>
+    function cong() {
+        let a = parseInt(document.getElementById('1').value);
+        let b = parseInt(document.getElementById('2').value);
+        alert(a+b)}
+    function tru() {
+        let a = parseInt(document.getElementById('1').value);
+        let b = parseInt(document.getElementById('2').value);
+        alert(a-b)}
+    function nhan() {
+        let a = parseInt(document.getElementById('1').value);
+        let b = parseInt(document.getElementById('2').value);
+        alert(a*b)}
+    function chia() {
+        let a = parseInt(document.getElementById('1').value);
+        let b = parseInt(document.getElementById('2').value);
+        alert(a/b)}
+</script>
+</body>
+</html>

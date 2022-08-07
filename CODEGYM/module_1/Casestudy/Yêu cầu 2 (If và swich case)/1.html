@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1</title>
+</head>
+<body>
+    <script>
+        let tax;
+        let salary = parseInt(prompt("Nhap luong vao: "));
+        if (salary==15000000){
+            tax = 0.2;
+        }else if (7000000<=salary){
+            tax = 0.1;
+        } else {
+            tax = 0.05;
+        }
+        alert("Thue thu nhap ca nhan la: " + salary*tax);
+        alert("Luong thuc te la: " + salary*(1-tax));
+    </script>
+</body>
+</html>

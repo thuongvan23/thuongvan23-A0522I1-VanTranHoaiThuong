@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3</title>
+</head>
+<body>
+    <script>
+        let arr1=[]; arr2=[]; arr3=[]; result = [];
+        let num = parseInt(prompt("Nhap so vao: "));
+        for (let i=0; i<=num; i++){
+            arr1[i] = i;
+        }
+        for (let i=2; i>1; i++){
+            arr2[0] = 1; arr2[1] = 1;
+            arr2[i] = arr2[i-1] + arr2[i-2];
+            if (arr2[i]>num){
+                arr2.pop();
+                break;
+            }
+        }
+        let k = 0;
+        for (let i=2; i<=num; i++){
+            let flag = true;
+            for (let j=2; j<i; j++){
+                if (i%j==0){
+                    flag = false;
+                    break;
+                    }
+                }
+                if (flag){
+                    arr3[k] = i;
+                    k++;
+                }
+        }
+        for (let i=0; i<num; i++){
+            if (arr2.includes(arr1[i])&&arr3.includes(arr1[i])){
+                result.push(arr1[i]);
+            }
+        }
+        alert("Tu 0 den "+num+" :" + arr1);
+        alert("fibo tu 0 den " +num+" :"+arr2);
+        alert("So nguyen to tu 0 den "+num+" : "+arr3);
+        alert(result);d
+    </script>
+</body>
+</html>

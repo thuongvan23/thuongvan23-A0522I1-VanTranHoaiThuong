@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>6</title>
+</head>
+<body>
+    <script>
+        class Lottery {
+            constructor(num1,num2,num3,num4,num5,num6,grade){
+                this.num1 = num1;
+                this.num2 = num2;
+                this.num3 = num3;
+                this.num4 = num4;
+                this.num5 = num5;
+                this.num6 = num6;
+                this.grade = grade;
+            }
+            setNum1(num1){
+                this.num1 = num1;
+            }
+            getNum1(){
+                return this.num1;
+            }
+            setNum2(num2){
+                this.num1 = num2;
+            }
+            getNum2(){
+                return this.num2;
+            }setNum3(num3){
+                this.num3 = num3;
+            }
+            getNum3(){
+                return this.num3;
+            }setNum4(num4){
+                this.num4 = num4;
+            }
+            getNum4(){
+                return this.num4;
+            }
+            setNum5(num5){
+                this.num5 = num5;
+            }
+            getNum5(){
+                return this.num5;
+            }setNum6(num6){
+                this.num6 = num6;
+            }
+            getNum6(){
+                return this.num6;
+            }setGrade(grade){
+                this.grade = grade;
+            }
+            getGrade(){
+                return this.Grade;
+            }
+            getRamdomNum(){
+                this.setNum1(Math.floor(Math.random()*99));
+                this.setNum2(Math.floor(Math.random()*99));
+                this.setNum3(Math.floor(Math.random()*99));
+                this.setNum4(Math.floor(Math.random()*99));
+                this.setNum5(Math.floor(Math.random()*99));
+                this.setNum6(Math.floor(Math.random()*99));
+            }
+            getNumber(){
+                return [this.num1, this.num2,this.num3,this.num4,this.num5,this.num6]
+            }
+            getInfor(){
+                return "Ve so"+this.getNumber().join(" ")+this.grade;
+            }
+        }
+    </script>
+</body>
+</html>

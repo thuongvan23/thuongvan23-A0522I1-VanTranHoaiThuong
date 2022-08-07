@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5</title>
+</head>
+<body>
+    <h2>Mang 1</h2>
+    <h3 id="array1"></h3>
+    <h2>Mang 2</h2>
+    <h3 id="array2"></h3>
+    <script>
+        let a=[];b=[]
+        let n = parseInt(prompt("Nhap so phan tu cua mang: "));
+        for(let i=0; i<n; i++){
+            a[i] = prompt("Nhap phan tu cua mang: ");
+        }
+        document.getElementById("array1").innerHTML=a;
+        let m = parseInt(prompt("Nhap so phan tu cua mang 2: "))
+        for(let j=0;j<m;j++){
+            b[j] = prompt("Nhap phan tu cua mang 2: ")
+        }
+        document.getElementById("array2").innerHTML=b;
+        if (m!=n){
+            alert("2 mang khong bang nhau")
+        }else {
+            let k=m;
+            for (k=0;k<m;k++){
+                if (a[k]!=b[k]){
+                    alert("2 mang khong bang nhau")
+                    break;
+                }
+            }
+            alert("2 mang bang nhau")
+        }
+    </script>
+</body>
+</html>

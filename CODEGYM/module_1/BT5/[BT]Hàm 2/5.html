@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5</title>
+</head>
+<body>
+    <script>
+        function min() {
+            let a = parseInt(prompt("Nhap so thu 1: "));
+            let b = parseInt(prompt("Nhap so thu 2: "));
+            let c = parseInt(prompt("Nhap so thu 3: "));
+            if (a<b){
+                if (a<c){
+                    alert("Gia tri nho nhat la: "+a);
+                } else {
+                    alert("Gia tri nho nhat la: "+c);
+                }
+            }else {
+                if (b<c){
+                    alert("Gia tri nho nhat la: "+b);
+                } else {
+                    alert("Gia tri nho nhat la: "+c);
+                }
+            }
+        }
+        min();
+    </script>
+</body>
+</html>

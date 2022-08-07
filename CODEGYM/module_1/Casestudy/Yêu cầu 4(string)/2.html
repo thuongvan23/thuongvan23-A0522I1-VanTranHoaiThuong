@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2</title>
+</head>
+<body>
+    <script>
+        function differenceSymbolsNaive(str) {
+            let arr = [];
+            for (let i=0; i<str.length; i++ ){
+                if(arr.indexOf(str.charAt(i))==-1){
+                    arr.push(str.charAt(i));
+                }
+            }
+            return arr.length
+        }
+        let str = prompt("Nhap xau ki tu: ");
+        alert("co " + differenceSymbolsNaive(str) +" ki tu khac nhau");
+    </script>
+</body>
+</html>

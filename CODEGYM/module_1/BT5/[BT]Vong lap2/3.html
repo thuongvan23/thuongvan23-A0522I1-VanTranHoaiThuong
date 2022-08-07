@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3</title>
+</head>
+<body>
+    <script>
+        let i = 1; j = 1;
+        for (i=1; i<=5; i++){
+            for (j=1; j<=i; j++){
+                document.write("*")
+            } document.write("<br>")
+        }
+    //in ra 1 *, break
+    //in ra 2 *, break
+    //in ra 3 *, break
+    //in ra 4 *, break
+    //in ra 5 *, break
+    //vòng 1: i=1(hàng 1); Lặp: đk j<=1, viết dấu * lặp 1 lần vì j=1 tới j=1 xuống dòng
+    //vòng 2: i=2(hàng 2); Lặp: đk j<=2, viết dấu * lặp 2 lần vì j=1 tới j=2, xuống dòng
+    //vòng 3: i=3(hàng 3); Lặp: đk j<=3, viết dấu * lặp 3 lần vì j=1 tới j=3, xuống dòng
+    //    -----------------------------------------------------------------------------
+        let a = 5; b = 1;
+        for (a=5; a>=1; a--){
+            for (b=1; b<=a; b++){
+                document.write("*")
+            } document.write("<br>")
+        }
+    //    -------------------------------------------------------
+        for (a=5; a>=1; a--){
+            //a=5
+            for (b=1; b<a; b++){
+                //lặp từ b=1 tới b=4
+                document.write("&nbsp&nbsp");
+            //    viết được 4a
+            }
+            for (let c=1; c<=6-a ; c++) {
+                document.write("*")
+            }
+            document.write("<br>")
+        }
+    //    Do em không biết thay dấu cách nên em thay bằng a :D
+    //    -------------------------------------------------------------
+        for (i=1; i<=5; i++){
+            for (j=1; j<=i; j++){
+                document.write("&nbsp&nbsp")
+            }
+            for (let d=1; d<=6-i ; d++) {
+                document.write("*")
+            }
+            document.write("<br>")
+        }
+
+    </script>
+</body>
+</html>

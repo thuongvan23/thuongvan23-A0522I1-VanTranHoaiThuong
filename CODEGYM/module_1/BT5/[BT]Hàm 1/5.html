@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5</title>
+</head>
+<body>
+    <script>
+        let c;
+        let sao = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"]
+        let chomsao = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"]
+        function check() {
+            let flag = false;
+            let a = prompt("Nhap ten sao: ");
+            for (let i = 0; i<sao.length; i++){
+                if (a==sao[i]){
+                    c = i;
+                    flag = true;
+                    break;
+                }
+            }
+            if (flag){
+                alert("Sao "+sao[c]+" thuoc chom sao " + chomsao[c]);
+            } else {
+            alert("Star khong ton tai trong mang")
+            }
+        }
+        check();
+    </script>
+</body>
+</html>

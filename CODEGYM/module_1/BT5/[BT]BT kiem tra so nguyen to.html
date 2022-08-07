@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[BT]BT kiem tra so nguyen to</title>
+</head>
+<body>
+    <script>
+        function isPrime() {
+            let number = parseInt(prompt("Nhap so: "));
+            let flag = true;
+            for (let i=2; i<number; i++){
+                if (number%i==0){
+                    flag=false;
+                    break;
+                }
+            }
+            if (flag){
+                alert(number+" la so nguyen to")
+            }else {
+                alert(number+" k la so nguyen to")
+            }
+        }
+        isPrime();
+    </script>
+</body>
+</html>

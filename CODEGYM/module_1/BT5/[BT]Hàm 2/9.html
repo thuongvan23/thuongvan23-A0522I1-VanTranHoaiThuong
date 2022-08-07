@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>9</title>
+</head>
+<body>
+    <button onclick="check()">Check</button>
+    <h2 id="result"></h2>
+    <script>
+        let count = 0;
+        let a = [];
+        let n = parseInt(prompt("Nhap do dai cua mang: "));
+        for (let i=0;i<n;i++){
+            a[i] = prompt("Nhap gia tri thu "+(i+1)+" cua mang: ");
+            if (a[i]==parseInt(a[i])){
+                alert("Khong duoc nhap so!!!");
+                a[i] = prompt("Nhap lai gia tri thu "+(i+1)+" cua mang: ");
+            }
+        }
+        document.getElementById("result").innerHTML = a;
+        function check() {
+            let letter = prompt("Nhap gia tri muon kiem tra: ")
+            for (let i=0;i<n;i++){
+                if (letter==a[i]){
+                    count += 1;
+                }}
+                if (count == 0){
+                    alert("-1");
+                }else {
+                    alert("Ki tu "+letter+" xuat hien " + count + " lan")
+                }
+            }
+    </script>
+</body>
+</html>

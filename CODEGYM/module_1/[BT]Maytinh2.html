@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[BT]Maytinh2</title>
+</head>
+
+<body>
+    <table border="5" height="150" width="100">
+        <tr>
+            <td colspan="4" width="100" height="20" id="screen"></td>
+        </tr>
+        <tr>
+            <td><button onclick="nhapso('1')" id="1">1</button></td>
+            <td><button onclick="nhapso('2')" id="2">2</button></td>
+            <td><button onclick="nhapso('3')" id="3">3</button></td>
+            <td><button onclick="nhapso('+')" id="+">+</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="nhapso('4')" id="4">4</button></td>
+            <td><button onclick="nhapso('5')" id="5">5</button></td>
+            <td><button onclick="nhapso('6')" id="6">6</button></td>
+            <td><button onclick="nhapso('-')" id="-">-</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="nhapso('7')" id="7">7</button></td>
+            <td><button onclick="nhapso('8')" id="8">8</button></td>
+            <td><button onclick="nhapso('9')" id="9">9</button></td>
+            <td><button onclick="nhapso('x')" id="x">x</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="nhapso('C')" id="C">C</button></td>
+            <td><button onclick="nhapso('0')" id="0">0</button></td>
+            <td><button onclick="nhapso('=')" id="=">=</button></td>
+            <td><button onclick="nhapso('/')" id="/">/</button></td>
+        </tr>
+    </table>
+    <script>
+        function nhapso(x) {
+            let giatri = parseInt(document.getElementById(x).value);
+            let scre = document.write(document.getElementById(screen).value + giatri)
+
+        }
+    </script>
+</body>
+</html>

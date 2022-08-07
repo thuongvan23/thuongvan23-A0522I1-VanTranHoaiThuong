@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[BT]BT ham chuyen foot sang met</title>
+</head>
+<body>
+    <input type="text" value="" id="input">
+    <button onclick="transtomet()">Đổi sang met</button>
+    <button onclick="transtfoot()">Đổi sang foot</button>
+    <script>
+        function transtomet() {
+            let a = parseInt(document.getElementById("input").value);
+            alert(0.305*a + "met")
+        }
+        function transtfoot() {
+            let b = parseInt(document.getElementById("input").value);
+            alert(b/0.305 + "foot")
+        }
+    </script>
+</body>
+</html>

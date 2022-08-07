@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3</title>
+</head>
+<body>
+    <script>
+        let a = [1, 4, 8, 8, 10, 54, 47, 54, 5, 7]
+        let max = a[0]
+        let average = a[0]/a.length;
+        for (let i=1; i < a.length; i++){
+            if (max <= a[i]){
+                max = a[i];
+            }
+            average += a[i]/a.length;
+        }
+        alert("Max la: " + max)
+        document.write("Gia tri trung binh la: " +average)
+    </script>
+</body>
+</html>

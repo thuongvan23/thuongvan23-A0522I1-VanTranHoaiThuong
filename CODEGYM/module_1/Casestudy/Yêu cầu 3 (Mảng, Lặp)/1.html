@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1</title>
+</head>
+<body>
+    <script>
+        let arr1 = [];
+        let arr2 = [];
+        let sum = 0;
+        let n = parseInt(prompt("Nhap kich thuoc mang 1: "));
+        for (let i=0; i<n; i++){
+            arr1[i] = parseInt(prompt("Nhap phan tu cua mang: "));
+            sum = sum + arr1[i];
+            arr2[i] = sum
+        }
+        document.write(arr1.join("-") + "<br>" + arr2.join("-"));
+    </script>
+</body>
+</html>

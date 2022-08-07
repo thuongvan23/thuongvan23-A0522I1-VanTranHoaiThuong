@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2</title>
+</head>
+<body>
+    <script>
+        let arr1 = ["1", "4", "5", "65", "34", "32", "2"];
+        let arr2 = ["3", "4", "8", "10", "65", "30"];
+        let count;
+        let arr3 = [];
+        for (let i=0; i<arr1.length; i++){
+            for (let j=0; j<arr2.length; j++){
+                if (arr1[i]==arr2[j]){
+                    count += 1;
+                }
+            }
+            if (count==0){
+                arr3.push(arr)
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>7</title>
+</head>
+<body>
+<h2>Nhập 1 số</h2>
+<input type="text" id="txt">
+<button id="abc" onclick="oke()">Sent</button>
+<h2 id="result">1, 5, 6, 8, 23, 12, 89, 100, 120, 11</h2>
+<h2 id="result1"></h2>
+<script>
+    let flag = false;
+    let b;
+    let a = [1, 5, 6, 8, 23, 12, 89, 100, 120, 11]
+    function oke() {
+        let number = parseInt(document.getElementById("txt").value);
+        for (let i=0; i < a.length; i++){
+            if (number==a[i]){
+                flag = true;
+                b = i;
+            }
+        }
+        if (flag){
+            alert("Ton tai trong mang");
+            for (let j=b; j<a.length; j++){
+                a[j]=a[j+1];
+            }
+            a[9]=0;
+            document.getElementById("result1").innerHTML = a;
+            // document.write(a);
+        }else{
+            alert("Khong ton tai trong mang")
+        }
+    }
+</script>
+</body>
+</html>

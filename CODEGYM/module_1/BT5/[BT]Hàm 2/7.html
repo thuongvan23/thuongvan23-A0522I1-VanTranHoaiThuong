@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>7</title>
+</head>
+<body>
+    <button onclick="change()" id="value"></button>
+    <script>
+        let a = [];
+        a[0] = prompt("Nhap gia tri thu nhat: ");
+        a[1] = prompt("Nhap gia tri thu hai: ");
+        document.getElementById("value").innerHTML = a;
+        function change() {
+            let b = a[0];
+            a[0] = a[1];
+            a[1] = b;
+            document.getElementById("value").innerHTML = a;
+        }
+    </script>
+</body>
+</html>

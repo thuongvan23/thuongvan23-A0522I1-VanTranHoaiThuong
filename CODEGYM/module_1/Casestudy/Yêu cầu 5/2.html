@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2</title>
+</head>
+<body>
+    <script>
+        let m = parseInt(prompt("Nhap vao so dong cua ma tran: "));
+        let n = parseInt(prompt("Nhap vao so cot cua ma tran: "));
+        let matrix = [];
+        let result = [];
+        function kiem_tra_snt(n)
+        {
+            // Biến cờ hiệu
+            var flag = true;
+
+            // Nếu n bé hơn 2 tức là không phải số nguyên tố
+            if (n < 2){
+                flag = false;
+            }
+            else{
+                // lặp từ 2 tới n-1
+                for (var i = 2; i < n-1; i++)
+                {
+                    if (n % i == 0){
+                        flag = false;
+                        break;
+                    }
+                }
+            }
+
+            // Kiểm tra biến flag
+            return flag;
+            // if (flag == true){
+            //     document.write(n + " là số nguyên tố <br/>");
+            // }
+            // else{
+            //     document.write(n + " không phải là số nguyên tố <br/>");
+            // }
+        }
+        //Nhập và duyệt mảng 2 chiều
+        for (let i=0; i<m; i++){
+            let row=[];
+            for (let j=0; j<n; j++){
+                row[j]=parseInt(prompt("Nhap so vao ma tran"));
+            }
+            matrix[i]=row;
+        }
+        for (let i=0; i<matrix.length;i++){
+            for (let j=0; j<matrix[i].length; j++){
+                if (kiem_tra_snt(matrix[i][j])){
+                    result.push(matrix[i][j]);
+                }
+            }
+        }
+        console.table(matrix);
+        console.log(result);
+    </script>
+</body>
+</html>
