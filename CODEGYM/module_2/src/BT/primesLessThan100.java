@@ -1,10 +1,9 @@
 package BT;
 
-public class first20Primes {
+public class primesLessThan100 {
     public static void main(String[] args) {
-        int count=1;
         int n=2;
-        while (count<=20){
+        while (n<=100){
             boolean check=true;
             for (int i=2; i<=n/2;i++) {
                 if (n % i == 0) {
@@ -13,7 +12,6 @@ public class first20Primes {
             }
             if(check){
                 System.out.println(" "+n);
-                count++;
             }
             n++;
         }
