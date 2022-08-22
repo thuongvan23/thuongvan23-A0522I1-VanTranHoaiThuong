@@ -4,20 +4,29 @@ import java.util.Scanner;
 
 public class sumOfCol {
     public static void main(String[] args) {
-        int A= new int [4][3];
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Nhap so Hang:");
-        int soHang = scanner.nextInt();
-        System.out.println("Nhap so Cot:");
-        int soCot = scanner.nextInt();
-        void nhapMT() {
-            A = new int[soHang][soCot];
-            System.out.println("Nhap ma tran "+ soHang +" x"+ soCot);
-            for(int i=0;i&lt;soHang;i++)
-            for(int j=0;j&lt;soCot;j++) {
-                System.out.println("A["+(i+1)+"]["+(j+1)+"]: ");
-                A[i][j]=nhapInt();
+        int[][] array= {
+                {1,2,3,4,5,6},
+                {6,12,6,21,2,45},
+                {23,12,44,12,2,1}
+        };
+        System.out.print("Mảng 2 chiều là: "+"\n");
+        for (int i=0;i<array.length;i++) {
+            for (int j=0;j<array[i].length;j++) {
+                System.out.print(array[i][j]+",");
             }
+            System.out.print("\n");
+        }
+        Scanner scanner= new Scanner(System.in);
+        System.out.print("Nhập cột muốn tính: ");
+        int number= scanner.nextInt();
+        if (number>array[0].length) {
+            System.out.println("Nhập lại");
+        }else {
+            int total=0;
+            for (int i=0;i<array.length;i++) {
+                total= total + array[i][number-1];
+            }
+            System.out.println("Tổng các phần cột "+ number+ " là: "+total);
         }
     }
 }
