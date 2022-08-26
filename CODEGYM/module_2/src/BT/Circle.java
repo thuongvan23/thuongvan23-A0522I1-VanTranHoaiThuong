@@ -1,17 +1,37 @@
 package BT;
 
 public class Circle {
-    private double radius = 1.0;
-    private String color = "red";
-    Circle (double radius){
+    public double radius;
+    public String color;
+    Circle (double radius, String color){
         this.radius = radius;
+        this.color = color;
     }
-    Circle(){};
 
-    public double getRadius() {
+    public Circle() {
+    }
+
+    public double getRadius(){
         return radius;
+    }
+    public String getColor(){
+        return color;
     }
     public double getArea() {
         return 3.14*radius*radius;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+    public void setRadius(double radius){
+        this.radius = radius;
+    }
+    public String toString() {
+        return "Circle{" +
+                "radius=" + radius +
+                ", color='" + color + '\'' +
+                "Area: "+ this.getArea() +
+                '}';
     }
 }
