@@ -1,4 +1,4 @@
-package BT.ss7;
+package BT.ss7.Resize;
 
 public class Rectangle extends Shape implements Resizeable{
     private double width = 1.0;

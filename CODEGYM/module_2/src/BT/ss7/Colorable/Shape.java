@@ -1,4 +1,4 @@
-package BT.ss7;
+package BT.ss7.Colorable;
 
 public abstract class Shape {
     private String color = "green";

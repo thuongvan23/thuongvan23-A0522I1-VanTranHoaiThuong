@@ -1,6 +1,8 @@
-package BT.ss7;
+package BT.ss7.Colorable;
 
-public class Square extends Shape implements Resizeable{
+import BT.ss7.Resize.Resizeable;
+
+public class Square extends Shape implements Resizeable {
     private double a;
 
     public Square(){

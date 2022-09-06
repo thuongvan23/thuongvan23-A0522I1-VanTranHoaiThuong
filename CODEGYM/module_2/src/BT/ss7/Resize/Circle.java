@@ -1,4 +1,4 @@
-package BT.ss7;
+package BT.ss7.Resize;
 
 public class Circle extends Shape implements Resizeable {
     private double radius = 1.0;

@@ -1,4 +1,4 @@
-package BT.ss7;
+package BT.ss7.Resize;
 
 public class Main {
     public static void main(String[] args) {
@@ -11,8 +11,10 @@ public class Main {
         for (Shape a : shapes) {
             System.out.println(a.getArea());
         }
+        System.out.println("After: ");
         for (Shape a: shapes) {
-
+            double newArea = a.getArea() * percent;
+            System.out.println(newArea);
         }
     }
 }
