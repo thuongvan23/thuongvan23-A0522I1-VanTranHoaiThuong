@@ -35,8 +35,8 @@ public class StudentService implements IStudentService {
             for (Student student : iStudentRepository.getAll()) {
                 if (student.getCode() == code) {
                     System.out.println("Are you sure (1.Yes or 2.No): ");
-                    Scanner scanner1 = new Scanner(System.in);
-                    if (scanner1.nextInt() == 1) {
+//                    Scanner scanner1 = new Scanner(System.in);
+                    if (scanner.nextInt() == 1) {
                         iStudentRepository.getAll().remove(student);
                         System.out.println("Xóa thành công.");
                         break loop;
