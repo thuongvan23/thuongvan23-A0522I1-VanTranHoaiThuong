@@ -3,7 +3,7 @@ package BT.ss6;
 public class Circle {
     public double radius;
     public String color;
-    Circle (double radius, String color){
+    public Circle(double radius, String color){
         this.radius = radius;
         this.color = color;
     }
