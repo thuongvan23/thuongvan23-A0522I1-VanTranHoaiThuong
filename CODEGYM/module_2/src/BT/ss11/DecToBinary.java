@@ -11,11 +11,7 @@ public class DecToBinary {
         int dec = scanner.nextInt();
         Stack<Integer> bin = new Stack<>();
         while (dec != 0) {
-            if (dec % 2 == 1) {
-                bin.push(1);
-            } else {
-                bin.push( 0);
-            }
+            bin.push(dec%2);
             dec = dec/2;
 //            System.out.println(dec + " " + (dec%2));
         }
