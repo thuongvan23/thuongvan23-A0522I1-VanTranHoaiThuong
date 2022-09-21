@@ -12,9 +12,10 @@ public class HandlingException {
             int b = scanner.nextInt();
             System.out.println("Enter size of Triangle (c): ");
             int c = scanner.nextInt();
-        } catch (Exception e){
-            System.out.println("ABC isn't a Triangle.");
+            if(a<0|| b<0||c<0||a+b<=c||a+c<=b||b+c<=a)
+                throw new IllegalTriangleException();
+        } catch (IllegalTriangleException e){
+            System.out.println("Input doesn't accepted.");
         }
-        System.out.println("ABC is a Triangle.");
     }
 }
