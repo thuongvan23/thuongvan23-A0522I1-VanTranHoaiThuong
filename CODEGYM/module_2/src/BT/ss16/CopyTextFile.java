@@ -10,6 +10,7 @@ public class CopyTextFile {
     public static void main(String[] args) throws IOException {
         FileInputStream inputStream = null;
         FileOutputStream outputStream = null;
+        int count = 0;
 
         try {
             inputStream = new FileInputStream("SourceFile.txt");
@@ -18,6 +19,7 @@ public class CopyTextFile {
             int c;
             while ((c = inputStream.read()) != -1){
                 outputStream.write(c);
+                count++;
             }
         } finally {
             if (inputStream != null) {
@@ -27,5 +29,6 @@ public class CopyTextFile {
                 outputStream.close();
             }
         }
+        System.out.println("Letters: "+count);
     }
 }
