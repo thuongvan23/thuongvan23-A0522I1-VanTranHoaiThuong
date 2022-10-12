@@ -1,52 +1,35 @@
 package BT.ss16;
 
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-
-        BufferedReader br = null;
-        try {
-            String line;
-            br = new BufferedReader(new FileReader("D:\\\\thuongvan23-A0522I1-VanTranHoaiThuong\\\\CODEGYM\\\\module_2\\\\src\\\\BT\\\\ss16\\\\Book1.csv"));
-
-            while ((line = br.readLine()) != null) {
-                printCountry(parseCsvLine(line));
+        String file = "src\\BT\\ss16\\Book1.csv";
+        BufferedReader reader = null;
+        String line;
+        try{
+            reader = new BufferedReader(new FileReader(file));
+            while ((line = reader.readLine()) != null){
+                String[] row = line.split(",");
+                for (String word: row){
+                    System.out.printf("%-10s", word);
+                }
+                System.out.println();
             }
-
-        } catch (IOException e) {
+        }
+        catch (Exception e){
             e.printStackTrace();
-        } finally {
+
+        }
+        finally {
             try {
-                if (br != null)
-                    br.close();
+                reader.close();
             } catch (IOException e) {
-                e.printStackTrace();
+                throw new RuntimeException(e);
             }
         }
-    }
-
-    public static List<String> parseCsvLine(String csvLine) {
-        List<String> result = new ArrayList<>();
-        if (csvLine != null) {
-            String[] splitData = csvLine.split(",");
-            for (int i = 0; i < splitData.length; i++) {
-                result.add(splitData[i]);
-            }
-        }
-        return result;
-    }
-
-    private static void printCountry(List<String> country) {
-        System.out.println(
-                "Country [id= "
-                        + country.get(0)
-                        + ", code= " + country.get(1)
-                        + " , name=" + country.get(2)
-                        + "]");
     }
 }

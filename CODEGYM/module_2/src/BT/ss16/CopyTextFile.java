@@ -1,7 +1,5 @@
 package BT.ss16;
 
-import com.sun.org.apache.bcel.internal.classfile.SourceFile;
-
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -22,12 +20,12 @@ public class CopyTextFile {
                 count++;
             }
         } finally {
-            if (inputStream != null) {
+//            if (inputStream != null) {
                 inputStream.close();
-            }
-            if (outputStream != null){
+//            }
+//            if (outputStream != null){
                 outputStream.close();
-            }
+//            }
         }
         System.out.println("Letters: "+count);
     }

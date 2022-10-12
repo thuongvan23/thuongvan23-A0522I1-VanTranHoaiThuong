@@ -1,12 +1,14 @@
 package BT.Assigment2.Repository.impl;
 
 import BT.Assigment2.Model.Brand;
+import BT.Assigment2.Repository.IBrandRepository;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class BrandRepository{
-    public List<Brand> brandMenu() {
+public class BrandRepository implements IBrandRepository {
+    @Override
+    public List<Brand> getAll() {
         Brand a = new Brand(1, "Honda", "Japan");
         Brand a1 = new Brand(2, "Toyota", "Japan");
         Brand a2 = new Brand(3, "Hyundai", "Korea");

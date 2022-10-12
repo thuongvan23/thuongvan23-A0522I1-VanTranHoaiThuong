@@ -7,7 +7,7 @@ public class Car extends Vehicle{
     public Car() {
     }
 
-    public Car(int id, String producedBrand, int productYear, String owner, int seat, String type) {
+    public Car(int id, Object producedBrand, int productYear, String owner, int seat, String type) {
         super(id, producedBrand, productYear, owner);
         Seat = seat;
         this.type = type;

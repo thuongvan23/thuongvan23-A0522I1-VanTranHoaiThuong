@@ -1,15 +1,15 @@
 package BT.Assigment2.Model;
 
-public abstract class Vehicle {
+public abstract class Vehicle{
     private int id;
-    private String producedBrand;
+    private Object producedBrand;
     private int productYear;
     private String owner;
 
     public Vehicle(){
     }
 
-    public Vehicle(int id, String producedBrand, int productYear, String owner) {
+    public Vehicle(int id, Object producedBrand, int productYear, String owner) {
         this.id = id;
         this.producedBrand = producedBrand;
         this.productYear = productYear;
@@ -24,7 +24,7 @@ public abstract class Vehicle {
         this.id = id;
     }
 
-    public String getProducedBrand() {
+    public Object getProducedBrand() {
         return producedBrand;
     }
 
