@@ -17,6 +17,7 @@ public class Square extends Shape implements Resizeable {
         this.a = a;
     }
 
+
     public double getA() {
         return a;
     }
