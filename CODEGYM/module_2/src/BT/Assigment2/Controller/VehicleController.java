@@ -24,7 +24,6 @@ public class VehicleController {
                 case 3:
                     RemoveController.RemoveMenu();
                     break;
-//                case 4:
                 case 5:
                     System.exit(0);
             }
