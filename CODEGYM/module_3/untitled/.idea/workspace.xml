@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c5120ebc-1f0b-4782-8857-bb71df4603d7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../StudentManagement/src/main/java/Bean/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../StudentManagement/src/main/java/Bean/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../StudentManagement/src/main/java/Controller/BookController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../StudentManagement/src/main/java/Repository/BookRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../StudentManagement/src/main/java/Repository/CategoryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../StudentManagement/src/main/java/Repository/impl/BookRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../StudentManagement/src/main/java/Repository/impl/CategoryRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../StudentManagement/src/main/java/Service/BookService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../StudentManagement/src/main/java/Service/CategoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../StudentManagement/src/main/java/Service/impl/BookServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../StudentManagement/src/main/java/Service/impl/CategoryServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../StudentManagement/src/main/webapp/Book/Create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../StudentManagement/src/main/webapp/Book/List.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sever-time/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sever-time/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sever-time/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sever-time/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../simple-login/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../simple-login/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../simple-login/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../simple-login/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../simple-login/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../simple-login/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../simple-login/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../simple-login/src/main/java/com/example/simplelogin/HelloServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../simple-login/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../simple-login/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module_2/src/BT/ProductManagement/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_2/src/BT/ProductManagement/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module_2/src/BT/ProductManagement/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_2/src/BT/ProductManagement/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="2I22zBesyVRPRcUGhOcFUwacJob" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "false"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c5120ebc-1f0b-4782-8857-bb71df4603d7" name="Changes" comment="" />
+      <created>1669365619121</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1669365619121</updated>
+      <workItem from="1669365620677" duration="18000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
