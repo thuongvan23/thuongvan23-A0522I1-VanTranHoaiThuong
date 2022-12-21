@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="edbbfb3a-db25-4165-a01d-e4d6f70863ea" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Assigment2/Controller/VehicleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Assigment2/Controller/VehicleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../../FuramaResort/out/production/FuramaResort/Controllers/FuramaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../FuramaResort/out/production/FuramaResort/Controllers/FuramaController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../../FuramaResort/out/production/FuramaResort/Repository/Data/villa.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../FuramaResort/out/production/FuramaResort/Repository/Data/villa.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../../FuramaResort/src/Controllers/FuramaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../FuramaResort/src/Controllers/FuramaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../../FuramaResort/src/Repository/Data/villa.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../FuramaResort/src/Repository/Data/villa.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,19 +13,22 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../.." />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="2Gl6qlif6KZHYXKmJDo6r1I9tfn" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -38,6 +38,10 @@
       <option name="presentableId" value="Default" />
       <updated>1666951020335</updated>
       <workItem from="1666951022947" duration="10000" />
+      <workItem from="1667612377775" duration="2080000" />
+      <workItem from="1667827912697" duration="1312000" />
+      <workItem from="1668776439720" duration="150000" />
+      <workItem from="1668776657611" duration="667000" />
     </task>
     <servers />
   </component>

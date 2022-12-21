@@ -1,7 +1,40 @@
 package Model;
 
-public class ServiceIncluded {
-    private String 
-            (attach_service_name), Đơn vị (attach_service_unit), Giá tiền
-            (attach_service_cost)
+public class AttachService {
+    private String attachServiceName;
+    private String attachServiceUnit;
+    private double attachServiceCost;
+
+    public AttachService() {
+    }
+
+    public AttachService(String attachServiceName, String attachServiceUnit, double attachServiceCost) {
+        this.attachServiceName = attachServiceName;
+        this.attachServiceUnit = attachServiceUnit;
+        this.attachServiceCost = attachServiceCost;
+    }
+
+    public String getAttachServiceName() {
+        return attachServiceName;
+    }
+
+    public void setAttachServiceName(String attachServiceName) {
+        this.attachServiceName = attachServiceName;
+    }
+
+    public String getAttachServiceUnit() {
+        return attachServiceUnit;
+    }
+
+    public void setAttachServiceUnit(String attachServiceUnit) {
+        this.attachServiceUnit = attachServiceUnit;
+    }
+
+    public double getAttachServiceCost() {
+        return attachServiceCost;
+    }
+
+    public void setAttachServiceCost(double attachServiceCost) {
+        this.attachServiceCost = attachServiceCost;
+    }
 }

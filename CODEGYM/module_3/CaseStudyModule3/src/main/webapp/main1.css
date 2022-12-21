@@ -14,7 +14,7 @@ body {
 }
 #footer {
     background-color: rgb(92, 92, 92);
-    height: 100px;
+    height: 200px;
     width: 100%;
     clear: both;
 }
@@ -22,6 +22,7 @@ body {
     height: 50px;
     width: 50px;
 }
-#name{
-    margin-left: 90%    ;
+.main-content{
+    margin-top: 20px;
+    margin-left: 20px;
 }

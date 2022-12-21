@@ -1,25 +1,25 @@
-package Controller;
+package Model;
 
 import java.util.Date;
 
 public class BenhNhan {
     private String ma_benh_nhan;
-    private String ma_benh_an;
     private String ten;
     private Date ngay_nhap_vien;
     private Date ngay_ra_vien;
     private String li_do_nhap_vien;
+    private BenhAn benh_an;
 
     public BenhNhan() {
     }
 
-    public BenhNhan(String ma_benh_nhan, String ma_benh_an, String ten, Date ngay_nhap_vien, Date ngay_ra_vien, String li_do_nhap_vien) {
+    public BenhNhan(String ma_benh_nhan, String ten, Date ngay_nhap_vien, Date ngay_ra_vien, String li_do_nhap_vien, BenhAn benh_an) {
         this.ma_benh_nhan = ma_benh_nhan;
-        this.ma_benh_an = ma_benh_an;
         this.ten = ten;
         this.ngay_nhap_vien = ngay_nhap_vien;
         this.ngay_ra_vien = ngay_ra_vien;
         this.li_do_nhap_vien = li_do_nhap_vien;
+        this.benh_an = benh_an;
     }
 
     public String getMa_benh_nhan() {
@@ -28,14 +28,6 @@ public class BenhNhan {
 
     public void setMa_benh_nhan(String ma_benh_nhan) {
         this.ma_benh_nhan = ma_benh_nhan;
-    }
-
-    public String getMa_benh_an() {
-        return ma_benh_an;
-    }
-
-    public void setMa_benh_an(String ma_benh_an) {
-        this.ma_benh_an = ma_benh_an;
     }
 
     public String getTen() {
@@ -68,5 +60,13 @@ public class BenhNhan {
 
     public void setLi_do_nhap_vien(String li_do_nhap_vien) {
         this.li_do_nhap_vien = li_do_nhap_vien;
+    }
+
+    public BenhAn getBenh_an() {
+        return benh_an;
+    }
+
+    public void setBenh_an(BenhAn benh_an) {
+        this.benh_an = benh_an;
     }
 }
