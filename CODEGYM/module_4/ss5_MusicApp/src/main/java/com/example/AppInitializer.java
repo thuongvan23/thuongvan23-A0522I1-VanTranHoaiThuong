@@ -1,6 +1,10 @@
 package com.example;
 
+import org.apache.commons.io.FileUtils;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
+
+import javax.servlet.MultipartConfigElement;
+import javax.servlet.ServletRegistration;
 
 public class AppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
     @Override
@@ -16,5 +20,11 @@ public class AppInitializer extends AbstractAnnotationConfigDispatcherServletIni
     @Override
     protected String[] getServletMappings() {
         return new String[]{"/"};
+    }
+
+    @Override
+    protected void customizeRegistration(ServletRegistration.Dynamic registration) {
+        MultipartConfigElement multipartConfigElement = new MultipartConfigElement(FileUtils.UPLOAD_LOCATION);
+        registration.setMultipartConfig(multipartConfigElement);
     }
 }
