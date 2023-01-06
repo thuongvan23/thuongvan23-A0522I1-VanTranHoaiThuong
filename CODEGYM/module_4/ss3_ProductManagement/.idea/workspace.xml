@@ -5,8 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="210f951f-d00e-4de5-bbd3-95b3e9c567e6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss5_MusicApp/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss5_MusicApp/src/main/java/com/example/controller/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss5_MusicApp/src/main/java/com/example/model/Songs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss5_MusicApp/src/main/java/com/example/repository/MusicRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss5_MusicApp/src/main/java/com/example/repository/MusicRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss5_MusicApp/src/main/java/com/example/service/MusicService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss5_MusicApp/src/main/java/com/example/service/MusicServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss5_MusicApp/src/main/webapp/WEB-INF/views/show_create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../TestModule4/test_orm/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../TestModule4/test_orm/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../TestModule4/test_orm/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../TestModule4/test_orm/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../TestModule4/test_orm/src/main/java/com/example/AppConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../TestModule4/test_orm/src/main/java/com/example/AppInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../TestModule4/test_orm/src/main/java/com/example/model/Customer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss4_ProductManagement/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/AppConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/AppInitializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/model/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss5_MusicApp/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ss5_MusicApp/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss5_MusicApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ss5_MusicApp/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss5_MusicApp/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../ss5_MusicApp/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss5_MusicApp/src/main/java/com/example/AppConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss5_MusicApp/src/main/java/com/example/AppConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss5_MusicApp/src/main/java/com/example/AppInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss5_MusicApp/src/main/java/com/example/AppInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss5_MusicApp/src/main/webapp/WEB-INF/views/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ss5_MusicApp/src/main/webapp/WEB-INF/views/show.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss5_MusicApp/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.69/webapps/ROOT/WEB-INF/classes/Controller/MainServlet.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.69/webapps/ROOT/WEB-INF/classes/Repository/ContractRepository.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.69/webapps/ROOT/WEB-INF/classes/Repository/CustomerRepository.class" beforeDir="false" />
@@ -67,19 +95,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/thuongvan23-A0522I1-VanTranHoaiThuong/CODEGYM/module_4/ss3_ProductManagement&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;baccc1e9a7ce4174080dd0062f583a55&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/thuongvan23-A0522I1-VanTranHoaiThuong/CODEGYM/module_4/ss3_ProductManagement",
+    "project.structure.last.edited": "Facets",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "spring",
+    "spring.configuration.checksum": "baccc1e9a7ce4174080dd0062f583a55"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\thuongvan23-A0522I1-VanTranHoaiThuong\CODEGYM\module_4\ss3_ProductManagement\src\main\webapp\WEB-INF" />
       <recent name="D:\thuongvan23-A0522I1-VanTranHoaiThuong\CODEGYM\module_4\ss4_ProductManagement\src\main\java\com\example" />
       <recent name="D:\thuongvan23-A0522I1-VanTranHoaiThuong\CODEGYM\module_4\ss4_ProductManagement\src\main\java" />
     </key>
@@ -189,6 +222,16 @@
       <workItem from="1672397951999" duration="28000" />
       <workItem from="1672749477756" duration="51000" />
       <workItem from="1672749553571" duration="41000" />
+      <workItem from="1672749644912" duration="34000" />
+      <workItem from="1672749692096" duration="681000" />
+      <workItem from="1672758206661" duration="23000" />
+      <workItem from="1672758617664" duration="8000" />
+      <workItem from="1672758775418" duration="2651000" />
+      <workItem from="1672763000920" duration="1123000" />
+      <workItem from="1672801988081" duration="621000" />
+      <workItem from="1672806491572" duration="607000" />
+      <workItem from="1672816421171" duration="291000" />
+      <workItem from="1672832124114" duration="2406000" />
     </task>
     <servers />
   </component>
@@ -205,5 +248,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

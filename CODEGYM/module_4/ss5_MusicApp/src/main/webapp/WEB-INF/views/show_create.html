@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create</title>
+</head>
+<body>
+    <h1>Create</h1>
+    <form th:object="${song}" th:action="save" method="post">
+        <label>
+            Name
+            <input type="text" th:field="*{name}">
+        </label>
+        <label>
+            Singer
+            <input type="text" th:field="*{singer}">
+        </label>
+        <label>
+            Type
+            <input type="text" th:field="*{type}">
+        </label>
+<!--        <label>-->
+<!--            Song-->
+<!--            <input type="text" th:field="*{filePath}">-->
+<!--        </label>-->
+        <button type="submit"><a th:href="/main/show">Save</a></button>
+        <button type="reset">Reset</button>
+    </form>
+</body>
+</html>
