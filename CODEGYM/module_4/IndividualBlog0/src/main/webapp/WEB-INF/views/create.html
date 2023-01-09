@@ -5,7 +5,7 @@
     <title>Create</title>
 </head>
 <body>
-    <form th:object="${blog}" th:action="save" method="post">
+    <form th:object="${blog}" th:action="@{/main/save}" method="post">
         Id
         <input th:field="*{id}" type="text">
         Name

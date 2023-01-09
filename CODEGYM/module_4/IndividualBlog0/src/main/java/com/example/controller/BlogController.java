@@ -32,21 +32,20 @@ public class BlogController {
     }
 
     @GetMapping("/detail/{id}")
-    public String showDetail(Model model, @PathVariable("id") Integer id){
+    public String showDetail(Model model, @PathVariable("id") int id){
         model.addAttribute("blog", blogService.findById(id));
         return "detail";
     }
 
     @GetMapping("/update/{id}")
-    public String showUpdate(Model model, @PathVariable("id") Integer id){
+    public String showUpdate(Model model, @PathVariable("id") int id){
         model.addAttribute("blog", blogService.findById(id));
         return "update";
     }
 
     @PostMapping("/edit")
-    public String edit(Model model, @ModelAttribute("blog") Blog blog){
+    public String edit(@ModelAttribute("blog") Blog blog){
         blogService.edit(blog.getId(), blog);
-        model.addAttribute("blogs", blogService.findAll());
-        return "show";
+        return "redirect:showSummary";
     }
 }

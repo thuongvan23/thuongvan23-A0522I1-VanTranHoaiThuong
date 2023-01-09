@@ -16,19 +16,28 @@ public class BLogRepositoryImpl implements BlogRepository {
         entityTransaction.commit();
     }
 
+//    @Override
+//    public void edit(int id, Blog blog) {
+//        EntityTransaction entityTransaction = BaseRepository.entityManager.getTransaction();
+//        entityTransaction.begin();
+//        try{
+//            BaseRepository.entityManager.createQuery("update Blog s set s.name = :name,s.content = :content where s.id = :id"
+//                    )
+//                    .setParameter("name",blog.getName())
+//                    .setParameter("content",blog.getContent());
+//
+//        } catch (Exception e){
+//            entityTransaction.rollback();
+//        }
+//        entityTransaction.commit();
+
+//    }
+
     @Override
     public void edit(int id, Blog blog) {
         EntityTransaction entityTransaction = BaseRepository.entityManager.getTransaction();
         entityTransaction.begin();
-        try{
-            BaseRepository.entityManager.createQuery("update Blog s set s.name = :name,s.content = :content where s.id = :id"
-                    )
-                    .setParameter("name",blog.getName())
-                    .setParameter("content",blog.getContent());
-
-        } catch (Exception e){
-            entityTransaction.rollback();
-        }
+        BaseRepository.entityManager.merge(blog);  //merge update
         entityTransaction.commit();
     }
 

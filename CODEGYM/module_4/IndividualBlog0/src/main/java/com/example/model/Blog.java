@@ -24,6 +24,11 @@ public class Blog {
         this.content = content;
     }
 
+    public Blog(String name, String content) {
+        this.name = name;
+        this.content = content;
+    }
+
     public int getId() {
         return id;
     }
