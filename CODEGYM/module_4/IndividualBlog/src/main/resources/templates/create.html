@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create</title>
+</head>
+<body>
+    <form th:object="${blog_form}" th:action="@{/main/save}" method="post">
+        Id
+        <input th:field="*{id}" type="text">
+        Name
+        <input th:field="*{name}" type="text">
+        Content
+        <input th:field="*{content}" type="text">
+        Category
+        <select>
+            <option>A</option>
+            <option>B</option>
+        </select>
+<!--        <select th:field="*{categoryId}">-->
+<!--            <option value="1">Health</option>-->
+<!--            <option value="2">World</option>-->
+<!--            <option value="3">Finance</option>-->
+<!--        </select>-->
+        <button type="reset">Reset</button>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
