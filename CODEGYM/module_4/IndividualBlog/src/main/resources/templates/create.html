@@ -13,15 +13,9 @@
         Content
         <input th:field="*{content}" type="text">
         Category
-        <select>
-            <option>A</option>
-            <option>B</option>
+        <select th:field="*{categoryId}">
+            <option th:each="category : ${categories}" th:value="${category.id}" th:text="${category.name}"></option>
         </select>
-<!--        <select th:field="*{categoryId}">-->
-<!--            <option value="1">Health</option>-->
-<!--            <option value="2">World</option>-->
-<!--            <option value="3">Finance</option>-->
-<!--        </select>-->
         <button type="reset">Reset</button>
         <button type="submit">Submit</button>
     </form>
