@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ShowSummary</title>
+</head>
+<body>
+  <h3>Summary</h3>
+  <table>
+    <thead>
+    <tr>
+      <th>Id</th>
+      <th>name</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="blog : ${blogs}">
+      <td th:text="${}"></td>
+    </tr>
+    </tbody>
+  </table>
+</body>

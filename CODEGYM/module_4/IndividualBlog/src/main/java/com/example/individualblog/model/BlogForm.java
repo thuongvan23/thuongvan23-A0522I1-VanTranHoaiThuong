@@ -18,6 +18,13 @@ public class BlogForm {
         this.categoryId = categoryId;
     }
 
+    public BlogForm (Blog blog){
+        this.id = blog.getId();
+        this.name = blog.getName();
+        this.content = blog.getContent();
+        this.categoryId = blog.getCategory().getId();
+    }
+
     public BlogForm(String content) {
         this.content = content;
     }

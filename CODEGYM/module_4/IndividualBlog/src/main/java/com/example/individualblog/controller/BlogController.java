@@ -60,7 +60,8 @@ public class BlogController {
 //
     @GetMapping("/update/{id}")
     public String showUpdate(Model model, @PathVariable("id") int id){
-        model.addAttribute("blog", blogService.findById(id));
+        model.addAttribute("blog_form", new BlogForm(blogService.findById(id)));
+        model.addAttribute("categories", new ArrayList<>(categories.values()));
         return "update";
     }
 //

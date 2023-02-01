@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Update</title>
+</head>
+<body>
+<h1>Update</h1>
+<form th:object="${product}" th:action="@{/main/save}" method="post">
+    <label>
+        Id
+        <input type="text" th:field="*{id}" placeholder="${product.id}">
+    </label>
+    <label>
+        Name
+        <input type="text" th:field="*{name}" placeholder="${product.name}">
+    </label>
+    <label>
+        Price
+        <input type="text" th:field="*{price}" placeholder="${product.price}">
+    </label>
+    <label>
+        Producer
+        <input type="text" th:field="*{producer}" placeholder="${product.producer}">
+    </label>
+    <label>
+        Description
+        <input type="text" th:field="*{description}" placeholder="${product.description}">
+    </label>
+    <button type="submit">Save</button>
+    <button type="reset">Reset</button>
+</form>
+</body>
+</html>

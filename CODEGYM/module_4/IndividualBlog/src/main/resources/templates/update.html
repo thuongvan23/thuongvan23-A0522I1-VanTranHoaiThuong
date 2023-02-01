@@ -6,15 +6,19 @@
 </head>
 <body>
   <h3>Update</h3>
-  <form th:action="@{/main/save}" th:object="${blog}" method="post">
+  <form th:object="${blog_form}" th:action="@{/main/save}" method="post">
     Id
-    <input th:field="*{id}" th:placeholder="${blog.id}" readonly>
+    <input th:field="*{id}" type="text" readonly>
     Name
-    <input th:field="*{name}" th:placeholder="${blog.name}">
+    <input th:field="*{name}" type="text">
     Content
-    <input th:field="*{content}" th:placeholder="${blog.content}">
-    <button type="submit">Submit</button>
+    <input th:field="*{content}" type="text">
+    Category
+    <select th:field="*{categoryId}">
+      <option th:each="category : ${categories}" th:value="${category.id}" th:text="${category.name}"></option>
+    </select>
     <button type="reset">Reset</button>
+    <button type="submit">Submit</button>
   </form>
 </body>
 </html>
