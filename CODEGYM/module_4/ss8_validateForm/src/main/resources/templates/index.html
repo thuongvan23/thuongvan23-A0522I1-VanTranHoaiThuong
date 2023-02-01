@@ -18,6 +18,9 @@
         Age:
         <input type="text" th:field="*{age}">
         <p th:if="${#fields.hasErrors('age')}" th:errors="*{age}"></p>
+        Email:
+        <input type="text" th:field="*{email}">
+        <p th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></p>
         <button type="reset">Reset</button>
         <button type="submit">Submit</button>
     </form>
