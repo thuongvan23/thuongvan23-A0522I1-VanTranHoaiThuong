@@ -23,7 +23,7 @@ public class MainController {
         if (bindingResult.hasFieldErrors()){
             return "index";
         } else {
-        return "result";
+            return "result";
         }
     }
 }
