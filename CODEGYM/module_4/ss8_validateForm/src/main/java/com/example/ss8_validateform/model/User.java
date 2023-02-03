@@ -1,10 +1,14 @@
 package com.example.ss8_validateform.model;
 
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.validation.constraints.*;
 
+@Entity
 public class User {
 
+    @Id
     @NotEmpty
     @Size(min = 5, max = 45)
     private String firstName;
