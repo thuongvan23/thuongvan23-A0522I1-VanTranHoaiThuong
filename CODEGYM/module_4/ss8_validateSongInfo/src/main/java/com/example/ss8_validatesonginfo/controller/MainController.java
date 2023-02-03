@@ -30,9 +30,9 @@ public class MainController {
     }
 
     @PostMapping("/save")
-    public String save(@Validated @ModelAttribute("song") Song song,
-                       RedirectAttributes redirectAttributes,
-                       BindingResult bindingResult) {
+    public String save(@Validated @ModelAttribute("song") Song song,BindingResult bindingResult,
+                       RedirectAttributes redirectAttributes
+                       ) {
         if (bindingResult.hasFieldErrors()) {
             return "create";
         } else {
