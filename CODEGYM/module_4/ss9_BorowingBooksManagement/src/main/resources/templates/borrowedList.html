@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Borrowed</title>
+</head>
+<body>
+<table border="2px">
+    <thead>
+    <tr>
+        <th>Title</th>
+        <th>Begin date</th>
+        <th>End date</th>
+        <th>Borrow code</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="transaction : ${transactions}">
+        <td th:text="${transaction.titleBook.title}"></td>
+        <td th:text="${transaction.beginDate}"></td>
+        <td th:text="${transaction.endDate}"></td>
+        <td th:text="${transaction.borrowedCode}"></td>
+        <td><a th:href="@{/main/giveBack/{borrowedCode}(borrowedCode=${transaction.borrowedCode})}">Give back</a></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
