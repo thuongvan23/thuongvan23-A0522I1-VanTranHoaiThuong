@@ -20,7 +20,8 @@
         <td th:text="${transaction.beginDate}"></td>
         <td th:text="${transaction.endDate}"></td>
         <td th:text="${transaction.borrowedCode}"></td>
-        <td><a th:href="@{/main/giveBack/{borrowedCode}(borrowedCode=${transaction.borrowedCode})}">Give back</a></td>
+<!--        Còn đoạn này gửi thiếu 1 biến qua pathvariable-->
+        <td><a th:href="@{/main/giveBack/{borrowedCode}/{idUser}(idUser=${idUser}, borrowedCode=${transaction.borrowedCode})}">Give back</a></td>
     </tr>
     </tbody>
 </table>

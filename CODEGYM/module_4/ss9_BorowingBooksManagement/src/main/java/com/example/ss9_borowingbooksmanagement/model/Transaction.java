@@ -18,8 +18,9 @@ public class Transaction {
     @JoinColumn(name = "title")
     private TitleBook titleBook;
 
-    public Transaction() {
-    }
+    @ManyToOne
+    @JoinColumn(name = "id")
+    private User user;
 
     public int getBorrowedCode() {
         return borrowedCode;
@@ -53,10 +54,22 @@ public class Transaction {
         this.titleBook = titleBook;
     }
 
-    public Transaction(int borrowedCode, String beginDate, String endDate, TitleBook titleBook) {
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public Transaction() {
+    }
+
+    public Transaction(int borrowedCode, String beginDate, String endDate, TitleBook titleBook, User user) {
         this.borrowedCode = borrowedCode;
         this.beginDate = beginDate;
         this.endDate = endDate;
         this.titleBook = titleBook;
+        this.user = user;
     }
 }

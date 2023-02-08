@@ -5,7 +5,7 @@
     <title>Title</title>
 </head>
 <body>
-<a th:href="@{/main/borrowedList}">Borrowed History</a>
+<a th:href="@{/main/borrowedList/{idUser}(idUser=${idUser})}">Borrowed History</a>
   <table border="2px">
     <thead>
     <tr>
@@ -20,7 +20,8 @@
       <td th:text="${titleBook.title}"></td>
       <td th:text="${titleBook.description}"></td>
       <td th:text="${titleBook.quantity}"></td>
-      <td><a th:href="@{/main/borrow/{title}(title=${titleBook.title})}">Borrow</a></td>
+<!--      <td><a th:href="@{/main/borrow/{title}/{idUser}(idUser=${idUser}, title=${titleBook.title})}">Borrow</a></td>-->
+      <td><a th:href="@{'/main/borrow/'+${titleBook.title}+'/'+${idUser}}">Borrow</a></td>
     </tr>
     </tbody>
   </table>
