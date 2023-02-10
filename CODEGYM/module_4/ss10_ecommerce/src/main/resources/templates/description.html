@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>description</title>
+</head>
+<body>
+  <p th:text="${item.itemName}"></p>
+  <p th:text="${item.description}"></p>
+  <a th:href="@{/main/addToCart/{itemName}(itemName=${item.itemName})}"></a>
+</body>
+</html>
