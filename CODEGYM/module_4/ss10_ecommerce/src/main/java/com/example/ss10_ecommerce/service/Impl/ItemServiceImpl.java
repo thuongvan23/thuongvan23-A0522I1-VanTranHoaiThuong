@@ -1,11 +1,13 @@
 package com.example.ss10_ecommerce.service.Impl;
 
+import com.example.ss10_ecommerce.model.Cart;
 import com.example.ss10_ecommerce.model.Item;
 import com.example.ss10_ecommerce.repository.ItemRepository;
 import com.example.ss10_ecommerce.service.ItemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.LinkedList;
 import java.util.List;
 
 @Service

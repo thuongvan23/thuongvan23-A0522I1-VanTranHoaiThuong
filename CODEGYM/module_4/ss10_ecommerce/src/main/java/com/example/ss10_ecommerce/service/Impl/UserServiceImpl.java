@@ -1,15 +1,19 @@
 package com.example.ss10_ecommerce.service.Impl;
 
+import com.example.ss10_ecommerce.model.Cart;
 import com.example.ss10_ecommerce.model.User;
 import com.example.ss10_ecommerce.repository.UserRepository;
 import com.example.ss10_ecommerce.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.LinkedList;
 import java.util.List;
 
 @Service
 public class UserServiceImpl implements UserService {
+
+    List<Cart> asds = new LinkedList<>();
 
     @Autowired
     UserRepository userRepository;

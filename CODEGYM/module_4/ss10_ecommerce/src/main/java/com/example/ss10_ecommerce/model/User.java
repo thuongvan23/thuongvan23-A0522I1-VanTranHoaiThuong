@@ -1,8 +1,9 @@
 package com.example.ss10_ecommerce.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
+import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 public class User {
@@ -12,6 +13,13 @@ public class User {
 
     @Column(name = "password")
     private String password;
+
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(name = "user_item",
+            joinColumns = @JoinColumn(name = "userName"),
+            inverseJoinColumns = @JoinColumn(name = "itemName"))
+    @JsonManagedReference
+    private Set<Item> itemSet;
 
     public User() {
     }

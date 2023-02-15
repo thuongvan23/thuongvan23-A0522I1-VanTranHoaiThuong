@@ -26,17 +26,17 @@ public class Item {
 
     @ManyToMany(mappedBy = "itemSet")
     @JsonManagedReference
-    private Set<Cart> cartSet;
+    private Set<User> userSet;
 
     public Item() {
     }
 
-    public Item(String itemName, float price, int quantity, String description, Set<Cart> cartSet) {
+    public Item(String itemName, float price, int quantity, String description, Set<User> userSet) {
         this.itemName = itemName;
         this.price = price;
         this.quantity = quantity;
         this.description = description;
-        this.cartSet = cartSet;
+        this.userSet = userSet;
     }
 
     public String getItemName() {
@@ -55,12 +55,12 @@ public class Item {
         this.price = price;
     }
 
-    public Set<Cart> getCartSet() {
-        return cartSet;
+    public Set<User> getUserSet() {
+        return userSet;
     }
 
-    public void setCartSet(Set<Cart> cartSet) {
-        this.cartSet = cartSet;
+    public void setUserSet(Set<User> userSet) {
+        this.userSet = userSet;
     }
 
     public int getQuantity() {

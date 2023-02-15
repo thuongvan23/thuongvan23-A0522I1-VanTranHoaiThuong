@@ -1,46 +1,67 @@
 package com.example.ss10_ecommerce.model;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
+import java.util.HashMap;
+import java.util.Map;
 
-import javax.persistence.*;
-import java.util.Set;
-
-@Entity
 public class Cart {
-
-    @Id
-    @OneToOne
-    @JoinColumn(name = "userName")
-    private User user;
-
-    @ManyToMany(cascade = CascadeType.ALL)
-    @JoinTable(name = "cart_item",
-            joinColumns = @JoinColumn(name = "idCart"),
-            inverseJoinColumns = @JoinColumn(name = "itemName"))
-    @JsonManagedReference
-    private Set<Item> itemSet;
+    private Map<Item,Integer> products = new HashMap<>();
 
     public Cart() {
     }
 
-    public Cart(User user, Set<Item> itemSet) {
-        this.user = user;
-        this.itemSet = itemSet;
+    public Cart(Map<Item,Integer> products) {
+        this.products = products;
     }
 
-    public User getUser() {
-        return user;
+    public Map<Item,Integer> getProducts() {
+        return products;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    private boolean checkItemInCart(Item product){
+        for (Map.Entry<Item, Integer> entry : products.entrySet()) {
+            if(entry.getKey().getItemName().equals(product.getItemName())){
+                return true;
+            }
+        }
+        return false;
     }
 
-    public Set<Item> getItemSet() {
-        return itemSet;
+    private Map.Entry<Item, Integer> selectItemInCart(Item product){
+        for (Map.Entry<Item, Integer> entry : products.entrySet()) {
+            if(entry.getKey().getItemName().equals(product.getItemName())){
+                return entry;
+            }
+        }
+        return null;
     }
 
-    public void setItemSet(Set<Item> itemSet) {
-        this.itemSet = itemSet;
+    public void addProduct(Item product){
+        if (!checkItemInCart(product)){
+            products.put(product,1);
+        } else {
+            Map.Entry<Item, Integer> itemEntry = selectItemInCart(product);
+            Integer newQuantity = itemEntry.getValue() + 1;
+            products.replace(itemEntry.getKey(),newQuantity);
+        }
+    }
+
+    public Integer countProductQuantity(){
+        Integer productQuantity = 0;
+        for (Map.Entry<Item, Integer> entry : products.entrySet()) {
+            productQuantity += entry.getValue();
+        }
+        return productQuantity;
+    }
+
+    public Integer countItemQuantity(){
+        return products.size();
+    }
+
+    public Float countTotalPayment(){
+        float payment = 0;
+        for (Map.Entry<Item, Integer> entry : products.entrySet()) {
+            payment += entry.getKey().getPrice() * (float) entry.getValue();
+        }
+        return payment;
     }
 }

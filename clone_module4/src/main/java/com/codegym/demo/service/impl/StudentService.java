@@ -6,6 +6,8 @@ import com.codegym.demo.repository.IStudentRepository;
 import com.codegym.demo.service.IStudentService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -39,5 +41,10 @@ public class StudentService implements IStudentService {
     @Override
     public Student findById(Integer codeStudent) {
         return iStudentRepository.findById(codeStudent).orElse(null);
+    }
+
+    @Override
+    public Page<Student> getAllWithPage(PageRequest of) {
+        return this.iStudentRepository.findAllWithPage(of);
     }
 }
