@@ -16,18 +16,27 @@ public class MainController {
     private CustomerService customerService;
 
     @GetMapping
-    public ResponseEntity<Iterable<Customer>> findAllCustomer() {
+    public ResponseEntity<Iterable<Customer>> findAllCustomer(){
         List<Customer> customers = (List<Customer>) customerService.findAll();
-        if (customers.isEmpty()) {
+        if (customers.isEmpty()){
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }
         return new ResponseEntity<>(customers, HttpStatus.OK);
     }
 
+//    @GetMapping("/{id}")
+//    public ResponseEntity<Customer> findCustomerById(@PathVariable Long id) {
+//        Optional<Customer> customerOptional = customerService.findById(id);
+//        if (!customerOptional.isPresent()) {
+//            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+//        }
+//        return new ResponseEntity<>(customerOptional.get(), HttpStatus.OK);
+//    }
+
     @GetMapping("/{id}")
-    public ResponseEntity<Customer> findCustomerById(@PathVariable Long id) {
+    public ResponseEntity<Customer> findCustomerById(@PathVariable Long id){
         Optional<Customer> customerOptional = customerService.findById(id);
-        if (!customerOptional.isPresent()) {
+        if (!customerOptional.isPresent()){
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
         return new ResponseEntity<>(customerOptional.get(), HttpStatus.OK);
