@@ -1,5 +1,8 @@
 package BT.ProductManagement.Model;
 
+import java.util.LinkedList;
+import java.util.List;
+
 public class Product {
     private String name;
     private int id;
@@ -46,4 +49,6 @@ public class Product {
                 ", price=" + price +
                 '}';
     }
+
+    List<Product>ass = new LinkedList<>();
 }

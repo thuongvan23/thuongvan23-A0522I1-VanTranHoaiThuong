@@ -20,8 +20,6 @@
       <change afterPath="$PROJECT_DIR$/../../../../module_4/ss12_phoneManagement/src/main/java/com/example/ss12_phonemanagement/service/PhoneServiceImpl.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../../../module_4/ss12_phoneManagement/src/main/resources/templates/index.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../../../module_4/ss12_phoneManagement/src/main/resources/templates/phones/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Product.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../../module_4/ss10_ecommerce/src/main/java/com/example/ss10_ecommerce/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../module_4/ss10_ecommerce/src/main/java/com/example/ss10_ecommerce/controller/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../../module_4/ss10_ecommerce/src/main/java/com/example/ss10_ecommerce/model/Day6_opt1_02.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../../../apache-tomcat-9.0.69/webapps/ROOT/WEB-INF/classes/com/example/AppConfiguration.class" beforeDir="false" />
@@ -93,7 +91,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/thuongvan23-A0522I1-VanTranHoaiThuong/CODEGYM/module_4/ss12_phoneManagement"
+    "last_opened_file_path": "D:/thuongvan23-A0522I1-VanTranHoaiThuong/CODEGYM/module_2/src/BT/ProductManagement"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -109,8 +107,7 @@
       <workItem from="1667827912697" duration="1312000" />
       <workItem from="1668776439720" duration="150000" />
       <workItem from="1668776657611" duration="667000" />
-      <workItem from="1676693751225" duration="898000" />
-      <workItem from="1676818227317" duration="2400000" />
+      <workItem from="1676693751225" duration="126000" />
     </task>
     <servers />
   </component>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Show product</title>
+</head>
+<body>
+<table>
+    <form th:action="@{/main/search}" method="get">
+        <input type="text" name="nameProduct">
+        <button type="submit">Search</button>
+    </form>
+
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Manufacturer</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="product : ${products}">
+        <td th:text="${product.id}"></td>
+        <td th:text="${product.nameProduct}"></td>
+        <td th:text="${product.price}"></td>
+        <td th:text="${product.manufacturer.nameManufacturer}"></td>
+        <td><a th:href="@{/main/delete/{id}(id=${product.id})}">Delete</a></td>
+        <td><a th:href="@{/main/update/{id}(id=${product.id})}">Update</a></td>
+    </tr>
+    </tbody>
+</table>
+<div>
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+            <li class="page-item" th:classappend="${currentPage == 0} ? disabled">
+                <a class="page-link" th:href="@{/main/show(nameProduct=${nameProduct}, page=0)}">First</a>
+            </li>
+            <li class="page-item" th:classappend="${currentPage == 0} ? disabled">
+                <a class="page-link" th:href="@{/main/show(nameProduct=${nameProduct}, page=${currentPage - 1})}">Previous</a>
+            </li>
+            <li th:each="i : ${#numbers.sequence(0, totalPages - 1)}" th:classappend="${currentPage == i} ? active">
+                <a class="page-link" th:href="@{/main/show(nameProduct=${nameProduct}, page=${i})}" th:text="${i + 1}"></a>
+            </li>
+            <li class="page-item" th:classappend="${currentPage == totalPages - 1} ? disabled">
+                <a class="page-link" th:href="@{/main/show(nameProduct=${nameProduct}, page=${currentPage + 1})}">Next</a>
+            </li>
+            <li class="page-item" th:classappend="${currentPage == totalPages - 1} ? disabled">
+                <a class="page-link" th:href="@{/main/show(nameProduct=${nameProduct}, page=${totalPages - 1})}">Last</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+</body>
+</html>
