@@ -52,9 +52,9 @@ public class CustomerController {
     }
 
     @PostMapping("/save")
-    public String save(@Valid @ModelAttribute("customer") Customer customer, BindingResult bindingResult){
-        LocalDate date = customer.getBirthday();
+    public String save(@Valid @ModelAttribute("customer") Customer customer, BindingResult bindingResult, Model model){
         if (bindingResult.hasFieldErrors()){
+            model.addAttribute("customerTypes", customerTypeService.findAll());
             return "create";
         } else {
             customerService.save(customer);
