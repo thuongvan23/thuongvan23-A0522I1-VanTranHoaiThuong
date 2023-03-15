@@ -1,6 +1,4 @@
-package com.example.case_study_module4.validate.age_enough;
-
-import com.example.case_study_module4.validate.max_date.MaxDateValidator;
+package com.example.final_moddule_4.validate.age_enough;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;

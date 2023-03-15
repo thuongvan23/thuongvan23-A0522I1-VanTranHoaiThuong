@@ -23,7 +23,7 @@
 <body>
 <div id="header">
   <div class="header-banner">
-    <h1>FURAMA RESORT</h1>
+    <h1>Info Sale</h1>
   </div>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
@@ -35,10 +35,10 @@
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Customer
+              Info sale
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" th:href="@{/main/show}">List</a></li>
+              <li><a class="dropdown-item" th:href="@{/main/show2}">List</a></li>
               <li><a class="dropdown-item" th:href="@{/main/create}">Create</a></li>
               <li><hr class="dropdown-divider"></li>
             </ul>
@@ -54,60 +54,40 @@
 
 <div id="main">
   <div class="main-content" id="form-create">
-    <h1>Create New Customer</h1>
-    <form class="row g-3" th:action="@{/main/save}" th:object="${customer}" method="post">
+    <h1>Create New Sale</h1>
+    <form class="row g-3" th:action="@{/main/save}" th:object="${infoSale}" method="post">
       <div class="col-md-6">
         Name
-        <input type="text" class="form-control" th:field="*{customerName}">
-        <p th:if="${#fields.hasErrors('customerName')}" th:errors="*{customerName}"></p>
+        <input type="text" class="form-control" th:field="*{nameSale}">
+        <p th:if="${#fields.hasErrors('nameSale')}" th:errors="*{nameSale}"></p>
       </div>
       <div class="col-12">
-        Day of birth
-        <input type="date" class="form-control" th:field="*{birthday}" style="width: 50%">
-        <p th:if="${#fields.hasErrors('birthday')}" th:errors="*{birthday}"></p>
+        Begin date
+        <input type="date" class="form-control" th:field="*{beginDate}" style="width: 50%">
+        <p th:if="${#fields.hasErrors('beginDate')}" th:errors="*{beginDate}"></p>
       </div>
       <div class="col-12">
-        Address
-        <input th:field="*{address}" type="text" class="form-control" style="width: 50%">
-        <p th:if="${#fields.hasErrors('address')}" th:errors="*{address}"></p>
+        End date
+        <input type="date" class="form-control" th:field="*{endDate}" style="width: 50%">
+        <p th:if="${#fields.hasErrors('endDate')}" th:errors="*{endDate}"></p>
       </div>
       <div class="col-12">
-        Email
-        <input th:field="*{email}" type="text" class="form-control" style="width: 50%">
-        <p th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></p>
+        Rate sale
+        <input th:field="*{rateSale}" type="text" class="form-control" style="width: 50%">
+        <p th:if="${#fields.hasErrors('rateSale')}" th:errors="*{rateSale}"></p>
       </div>
       <div class="col-12">
-        ID card
-        <input th:field="*{idCard}" type="text" class="form-control" style="width: 50%">
-        <p th:if="${#fields.hasErrors('idCard')}" th:errors="*{idCard}"></p>
+        Detail
+        <input th:field="*{detail}" type="text" class="form-control" style="width: 50%">
+        <p th:if="${#fields.hasErrors('detail')}" th:errors="*{detail}"></p>
       </div>
-      <div class="col-12">
-        Phone number
-        <input th:field="*{phoneNumber}" type="text" class="form-control" style="width: 50%">
-        <p th:if="${#fields.hasErrors('phoneNumber')}" th:errors="*{phoneNumber}">
-      </div>
-      <div class="col-md-4">
-        Customer type
-        <select th:field="*{customerType}" class="form-select">
-          <option th:each="customerType : ${customerTypes}"
-                  th:value="${customerType.typeId}"
-                  th:text="${customerType.typeName}"></option>
-        </select>
-      </div>
-      <div class="col-md-4">
-        Gender
-        <select th:field="*{gender}" class="form-select">
-          <option th:value="0" th:text="Male"></option>
-          <option th:value="1" th:text="Female"></option>
-          <option th:value="2" th:text="Other"></option>
-        </select>
-      </div>
+
       <div class="col-12" style="margin-top: 20px">
         <button type="submit" class="btn btn-primary">Create</button>
       </div>
     </form>
     <div class="col-12" style="margin-top: 20px">
-      <a th:href="@{/main/show}"><button type="button" class="btn btn-primary">Back</button></a>
+      <a th:href="@{/main/show2}"><button type="button" class="btn btn-primary">Back</button></a>
     </div>
   </div>
 </div>

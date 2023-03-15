@@ -1,0 +1,28 @@
+<p>caculator works!</p>
+<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+<div class="calculator">
+  <h1>Calculator</h1>
+  <input type="text" class="textbox text-right" value="{{caculator.value}}" readonly><br>
+  <div class = "buttons center-block">
+  <button type="button" class="btn btn-primary" (click)="clearCaculator()">AC</button>
+  <button type="button" class="btn btn-primary" >CE</button>
+  <button type="button" class="btn btn-primary" (click)="insertCaculator('%')">%</button>
+  <button type="button" class="btn btn-primary" (click)="insertCaculator('/')">/</button>
+  <button type="button" class="btn btn-primary" (click)="insertCaculator('7')">7</button>
+  <button type="button" class="btn btn-primary" (click)="insertCaculator('8')">8</button>
+  <button type="button" class="btn btn-primary" (click)="insertCaculator('9')">9</button>
+  <button type="button" class="btn btn-primary" (click)="insertCaculator('*')">*</button>
+  <button type="button" class="btn btn-primary" (click)="insertCaculator('4')">4</button>
+  <button type="button" class="btn btn-primary" (click)="insertCaculator('5')">5</button>
+  <button type="button" class="btn btn-primary" (click)="insertCaculator('6')">6</button>
+  <button type="button" class="btn btn-primary" (click)="insertCaculator('-')">-</button>
+  <button type="button" class="btn btn-primary" (click)="insertCaculator('1')">1</button>
+  <button type="button" class="btn btn-primary" (click)="insertCaculator('2')">2</button>
+  <button type="button" class="btn btn-primary" (click)="insertCaculator('3')">3</button>
+  <button type="button" class="btn btn-primary" (click)="insertCaculator('+')">+</button>
+  <button type="button" class="btn btn-primary" (click)="insertCaculator('.')">.</button>
+  <button type="button" class="btn btn-primary" (click)="insertCaculator('0')">0</button>
+  <button type="button" class="btn btn-primary" >Ans</button>
+  <button type="button" class="btn btn-primary" (click)="excute()">=</button>
+  </div>
+</div>

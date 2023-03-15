@@ -9,4 +9,5 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional
 public interface CustomerRepository extends JpaRepository<Customer, Integer> {
     Page<Customer> findAllByCustomerNameContaining(String customerName, Pageable pageable);
+    Page<Customer> findAllByCustomerNameContainingOrAddressContainingOrCustomerType_TypeName(String customerName, String address, String typeName, Pageable pageable);
 }

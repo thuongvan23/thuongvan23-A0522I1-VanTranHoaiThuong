@@ -1,6 +1,5 @@
 package com.example.case_study_module4.model;
 
-import com.example.case_study_module4.validate.max_date.MaxDate;
 import com.example.case_study_module4.validate.min_date.MinDate;
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -23,7 +22,6 @@ public class Customer {
     @Column(name = "birthday")
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     @Past(message = "date must before ")
-//    @MaxDate(value = "2023-01-01")
     @MinDate(value = "2023-01-01")
     private LocalDate birthday;
     @Column(name = "gender")
@@ -38,6 +36,7 @@ public class Customer {
     @Email(message = "Invalid email address")
     @Column(name = "email")
     private String email;
+    @NotNull
     @Column(name = "address")
     private String address;
     @ManyToOne

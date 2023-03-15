@@ -32,6 +32,11 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
+    public Page<Customer> findAllByCustomerNameContainingOrAddressContainingOrCustomerType_TypeName(Pageable pageable, String customerName, String address, String typeName) {
+        return customerRepository.findAllByCustomerNameContainingOrAddressContainingOrCustomerType_TypeName(customerName, address, typeName, pageable);
+    }
+
+    @Override
     public void deleteById(int id) {
         customerRepository.deleteById(id);
     }
