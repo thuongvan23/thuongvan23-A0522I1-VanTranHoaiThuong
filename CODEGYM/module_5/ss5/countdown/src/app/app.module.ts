@@ -3,18 +3,16 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { RatingComponent } from './rating/rating.component';
-import { FormsModule } from '@angular/forms';
+import { CountDownComponent } from './count-down/count-down.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RatingComponent
+    CountDownComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    FormsModule
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
