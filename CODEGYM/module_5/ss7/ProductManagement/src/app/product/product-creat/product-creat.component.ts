@@ -11,7 +11,7 @@ import { ProductService } from 'src/app/service/product.service';
 export class ProductCreatComponent implements OnInit {
 
   constructor (private productService: ProductService,
-              private router: Router) {}
+               private router: Router) {}
 
   productForm: FormGroup = new FormGroup({
     id: new FormControl(),

@@ -17,4 +17,11 @@ export class ProductListComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  deleteProduct(id: number): void {
+    if (confirm('Bạn có chắc muốn xóa sản phẩm này?')) {
+      this.productService.deleteProduct(id);
+      this.products = this.productService.getAll();
+    }
+  }
 }

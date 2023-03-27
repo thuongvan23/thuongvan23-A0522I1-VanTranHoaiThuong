@@ -6,11 +6,17 @@
     <td>Tên</td>
     <td>Giá</td>
     <td>Mô tả</td>
+    <td>Update</td>
+    <td>Delete</td>
+    <td>Detail</td>
   </tr>
   <tr *ngFor="let product of products; index as i">
     <td>{{i + 1}}</td>
     <td>{{product.name}}</td>
     <td>{{product.price}}</td>
     <td>{{product.description}}</td>
+    <td><button><a [routerLink]="['/product/edit',product.id]">Edit</a></button></td>
+    <td><button><a (click)="deleteProduct(product.id)">Delete</a></button></td>
+    <td><button><a [routerLink]="['/product/',product.id]">Detail</a></button></td>
   </tr>
 </table>
