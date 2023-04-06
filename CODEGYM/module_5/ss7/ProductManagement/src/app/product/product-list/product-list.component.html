@@ -1,22 +1,41 @@
-<p>product-list works!</p>
 <h1>Danh sách sản phẩm</h1>
-<table>
-  <tr>
-    <td>STT</td>
-    <td>Tên</td>
-    <td>Giá</td>
-    <td>Mô tả</td>
-    <td>Update</td>
-    <td>Delete</td>
-    <td>Detail</td>
-  </tr>
-  <tr *ngFor="let product of products; index as i">
-    <td>{{i + 1}}</td>
-    <td>{{product.name}}</td>
-    <td>{{product.price}}</td>
-    <td>{{product.description}}</td>
-    <td><button><a [routerLink]="['/product/edit',product.id]">Edit</a></button></td>
-    <td><button><a (click)="deleteProduct(product.id)">Delete</a></button></td>
-    <td><button><a [routerLink]="['/product/',product.id]">Detail</a></button></td>
-  </tr>
+<div style="display: flex;">
+  <div>
+    <select (change)="findByCategory(category.value)" #category>
+      <option value="">Choose</option>
+      <option *ngFor="let category of categories" [ngValue]="category.name">{{category.categoryName}}</option>
+    </select>
+    </div>
+    <div>
+    <input (keyup.enter)="findByTextExist(search.value)" class="form-control me-2" #search type="search" placeholder="Search" aria-label="Search">
+    </div>
+    <div>
+    <button class="btn btn-outline-success" (click)="findByTextExist(search.value)">Search</button>
+    </div>
+</div>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">STT</th>
+      <th scope="col">Tên</th>
+      <th scope="col">Loại</th>
+      <th scope="col">Giá</th>
+      <th scope="col">Mô tả</th>
+      <th scope="col">Update</th>
+      <th scope="col">Delete</th>
+      <th scope="col">Detail</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products; index as i">
+      <th scope="row">{{i + 1}}</th>
+      <td>{{product.name}}</td>
+      <td>{{product.category.categoryName}}</td>
+      <td>{{product.price}}</td>
+      <td>{{product.description}}</td>
+      <td><button><a [routerLink]="['/product/edit',product.id]">Edit</a></button></td>
+      <td><button><a (click)="deleteProduct(product.id)">Delete</a></button></td>
+      <td><button><a [routerLink]="['/product/',product.id]">Detail</a></button></td>
+    </tr>
+  </tbody>
 </table>

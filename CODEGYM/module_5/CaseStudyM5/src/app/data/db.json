@@ -1,0 +1,110 @@
+{
+  "customers": [
+    {
+      "name": "Marriau",
+      "phone": "0394692303",
+      "dob": "2000-05-19",
+      "customerType": {
+        "id": 2,
+        "name": "Gold"
+      },
+      "id": 2
+    },
+    {
+      "name": "Anna",
+      "dob": "2023-04-04",
+      "phone": "0123425641",
+      "customerType": {
+        "id": 3,
+        "name": "Silver"
+      },
+      "id": 3
+    },
+    {
+      "name": "Jhon",
+      "phone": "0123456789",
+      "dob": "2014-06-11",
+      "customerType": {
+        "id": 2,
+        "name": "Gold"
+      },
+      "id": 4
+    },
+    {
+      "name": "Marian",
+      "dob": "2023-04-04",
+      "phone": "0123564785",
+      "customerType": {
+        "id": 4,
+        "name": "Normal"
+      },
+      "id": 5
+    }
+  ],
+  "customerTypes": [
+    {
+      "id": 1,
+      "name": "Diamond"
+    },
+    {
+      "id": 2,
+      "name": "Gold"
+    },
+    {
+      "id": 3,
+      "name": "Silver"
+    },
+    {
+      "id": 4,
+      "name": "Normal"
+    }
+  ],
+  "facilities": [
+    {
+      "name": "Service superu",
+      "facilityType": {
+        "id": 1,
+        "name": "House"
+      },
+      "id": 3
+    },
+    {
+      "name": "32156",
+      "facilityType": {
+        "id": 2,
+        "name": "Villa"
+      },
+      "id": 4
+    }
+  ],
+  "facilityTypes": [
+    {
+      "id": 1,
+      "name": "House"
+    },
+    {
+      "id": 2,
+      "name": "Villa"
+    },
+    {
+      "id": 3,
+      "name": "Room"
+    }
+  ],
+  "contacts": [
+    {
+      "id": 1,
+      "customerName": "A",
+      "facility": {
+        "name": "32156",
+        "facilityType": {
+          "id": 2,
+          "name": "Villa"
+          },
+      "id": 4
+      },
+      "begindate": "2023-03-12",
+      "enddate": "2023-03-15"
+    }
+  ]
+}

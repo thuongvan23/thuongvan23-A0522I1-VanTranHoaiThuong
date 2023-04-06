@@ -1,6 +1,5 @@
-<p>product-creat works!</p>
 <h1>Tạo sản phẩm mới</h1>
-<form [formGroup]="productForm" (ngSubmit)="submit()">
+<form [formGroup]="productForm" (ngSubmit)="submit()" novalidate>
   <table>
     <tr>
       <td>Mã sản phẩm:</td>
@@ -9,6 +8,13 @@
     <tr>
       <td>Tên sản phẩm:</td>
       <td><input type="text" formControlName="name"></td>
+      <!-- <p style="color: red;" *ngIf="!productForm.controls.name?.valid && (productForm.controls.name?.dirty || productForm.controls.name?.touched)">
+        Tên không đúng định dạng
+      </p> -->
+      <div style="color: red;" *ngIf="!productForm.controls.name?.valid && (productForm.controls.name?.dirty || productForm.controls.name?.touched)">
+        <div [hidden] *ngIf="!productForm.controls.name?.errors.require"><p>Bắt buộc</p></div>
+        <div [hidden] *ngIf="productForm.controls.name?.errors.minlength"><p>Tên phải lớn hơn 3 kí tự</p></div>
+      </div>
     </tr>
     <tr>
       <td>Giá sản phẩm</td>
@@ -19,8 +25,16 @@
       <td><input type="text" formControlName="description"></td>
     </tr>
     <tr>
+      <td>Loại</td>
+      <td>
+        <select formControlName="category">
+          <option *ngFor="let category of categories" [ngValue]="category">{{category.categoryName}}</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
       <td></td>
-      <td><button>Tạo mới</button></td>
+      <td><button [disabled]="!productForm.valid">Tạo mới</button></td>
     </tr>
   </table>
 </form>

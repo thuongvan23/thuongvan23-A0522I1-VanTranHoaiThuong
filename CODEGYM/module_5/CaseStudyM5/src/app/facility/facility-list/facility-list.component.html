@@ -1,0 +1,29 @@
+<h1>Facilities</h1>
+<!-- <div style="display: flex;">
+    <div>
+    <input (keyup.enter)="findByTextExist(search.value)" class="form-control me-2" #search type="search" placeholder="Search" aria-label="Search">
+    </div>
+    <div>
+    <button class="btn btn-outline-success" (click)="findByTextExist(search.value)">Search</button>
+    </div>
+</div> -->
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">No</th>
+      <th scope="col">Name</th>
+      <th scope="col">Facility type</th>
+      <th scope="col">Update</th>
+      <th scope="col">Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let facility of facilities; index as i">
+      <th scope="row">{{i + 1}}</th>
+      <td>{{facility.name}}</td>
+      <td>{{facility.facilityType.name}}</td>
+      <td><button><a [routerLink]="['/facility/update',facility.id]">Edit</a></button></td>
+      <td><button><a (click)="deleteFacility(facility.id)">Delete</a></button></td>
+    </tr>
+  </tbody>
+</table>

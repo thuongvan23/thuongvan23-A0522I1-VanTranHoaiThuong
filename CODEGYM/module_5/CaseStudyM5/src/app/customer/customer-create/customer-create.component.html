@@ -1,0 +1,29 @@
+<h1>Tạo sản phẩm mới</h1>
+<form [formGroup]="createForm" (ngSubmit)="submit()" novalidate>
+  <table>
+    <tr>
+      <td>Tên:</td>
+      <td><input type="text" formControlName="name"></td>
+    </tr>
+    <tr>
+      <td>Birthday:</td>
+      <td><input type="date" formControlName="dob"></td>
+    </tr>
+    <tr>
+      <td>Phone:</td>
+      <td><input type="text" formControlName="phone"></td>
+    </tr>
+    <tr>
+      <td>Customer type:</td>
+      <td>
+        <select formControlName="customerType">
+          <option *ngFor="let customerType of customerTypes" [ngValue]="customerType">{{customerType.name}}</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><button>Tạo mới</button></td>
+    </tr>
+  </table>
+</form>

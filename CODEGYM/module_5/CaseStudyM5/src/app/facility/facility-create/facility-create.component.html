@@ -1,0 +1,21 @@
+<h1>Create new facility</h1>
+<form [formGroup]="createForm" (ngSubmit)="submit()" novalidate>
+  <table>
+    <tr>
+      <td>Name:</td>
+      <td><input type="text" formControlName="name"></td>
+    </tr>
+    <tr>
+      <td>Facility type:</td>
+      <td>
+        <select formControlName="facilityType">
+          <option *ngFor="let facilityType of facilityTypes" [ngValue]="facilityType">{{facilityType.name}}</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><button>Create</button></td>
+    </tr>
+  </table>
+</form>

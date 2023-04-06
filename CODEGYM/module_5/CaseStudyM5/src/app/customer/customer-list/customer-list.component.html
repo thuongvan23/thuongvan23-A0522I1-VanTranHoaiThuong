@@ -1,0 +1,33 @@
+<h1>Customers</h1>
+<div style="display: flex;">
+    <div>
+    <input (keyup.enter)="findByTextExist(search.value)" class="form-control me-2" #search type="search" placeholder="Search" aria-label="Search">
+    </div>
+    <div>
+    <button class="btn btn-outline-success" (click)="findByTextExist(search.value)">Search</button>
+    </div>
+</div>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">No</th>
+      <th scope="col">Name</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Birthday</th>
+      <th scope="col">Customer type</th>
+      <th scope="col">Update</th>
+      <th scope="col">Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let customer of customers; index as i">
+      <th scope="row">{{i + 1}}</th>
+      <td>{{customer.name}}</td>
+      <td>{{customer.phone}}</td>
+      <td>{{customer.dob | date:'dd/MM/yyyy'}}</td>
+      <td>{{customer.customerType.name}}</td>
+      <td><button><a [routerLink]="['/customer/update',customer.id]">Edit</a></button></td>
+      <td><button><a (click)="deleteCustomer(customer.id)">Delete</a></button></td>
+    </tr>
+  </tbody>
+</table>

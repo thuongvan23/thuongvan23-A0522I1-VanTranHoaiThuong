@@ -1,0 +1,98 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "IPhone 12u",
+      "price": 2400000,
+      "description": "New",
+      "category": {
+        "id": 1,
+        "categoryName": "Category1"
+      }
+    },
+    {
+      "id": 2,
+      "name": "IPhone 11u",
+      "price": 1560000,
+      "description": "Like newu",
+      "category": {
+        "id": 2,
+        "categoryName": "Category2"
+      }
+    },
+    {
+      "id": 3,
+      "name": "IPhone X",
+      "price": 968000,
+      "description": "97%",
+      "category": {
+        "id": 2,
+        "categoryName": "Category2"
+      }
+    },
+    {
+      "id": 4,
+      "name": "IPhone 8u",
+      "price": 7540000,
+      "description": "98%",
+      "category": {
+        "id": 3,
+        "categoryName": "Category3"
+      }
+    },
+    {
+      "id": 6,
+      "name": "2222u",
+      "price": 2222,
+      "description": "2222u",
+      "category": {
+        "id": 1,
+        "categoryName": "Category1"
+      }
+    },
+    {
+      "id": 123333,
+      "name": "123",
+      "description": "123",
+      "price": 123,
+      "category": {
+        "id": 2,
+        "categoryName": "Category2"
+      }
+    },
+    {
+      "id": 123334,
+      "name": "1212",
+      "description": "1212",
+      "price": 121212,
+      "category": {
+        "id": 1,
+        "categoryName": "Category1"
+      }
+    },
+    {
+      "id": 151515,
+      "name": "Ip 15",
+      "description": "aaaaaaaaaaaaaaaaaaaa",
+      "price": 123123123,
+      "category": {
+        "id": 2,
+        "categoryName": "Category2"
+      }
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "categoryName": "Category1"
+    },
+    {
+      "id": 2,
+      "categoryName": "Category2"
+    },
+    {
+      "id": 3,
+      "categoryName": "Category3"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+<h1>Update facility</h1>
+<form [formGroup]="updateForm" (ngSubmit)="updateFacility()">
+  <table>
+    <tr>
+      <td>Name:</td>
+      <td><input type="text" formControlName="name" value="{{facility.name}}"></td>
+    </tr>
+    <tr>
+      <td>Facility type:</td>
+      <td>
+        <select formControlName="facilityType" [compareWith]="compareFn">
+          <option *ngFor="let facilityType of facilityTypes"
+                  [ngValue]="facilityType">{{facilityType.name}}</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><button>Update</button></td>
+    </tr>
+  </table>
+</form>

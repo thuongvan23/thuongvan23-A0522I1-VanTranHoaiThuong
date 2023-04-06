@@ -7,8 +7,13 @@ import { ProductCreatComponent } from './product/product-creat/product-creat.com
 import { ProductListComponent } from './product/product-list/product-list.component';
 
 import { ReactiveFormsModule } from '@angular/forms';
-import { ProductUpdateComponent } from './product-update/product-update.component';
-import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { ProductUpdateComponent } from './product/product-update/product-update.component';
+import { ProductDetailComponent } from './product/product-detail/product-detail.component';
+
+import { HttpClientModule } from '@angular/common/http';
+import { NavbarComponent } from './navbar/navbar.component';
+
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -16,12 +21,16 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
     ProductCreatComponent,
     ProductListComponent,
     ProductUpdateComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    NavbarComponent,
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

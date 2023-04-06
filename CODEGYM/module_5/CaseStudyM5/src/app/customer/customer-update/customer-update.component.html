@@ -1,0 +1,30 @@
+<h1>Cập nhật thông tin khách hàng</h1>
+<form [formGroup]="updateForm" (ngSubmit)="updateCustomer()">
+  <table>
+    <tr>
+      <td>Name:</td>
+      <td><input type="text" formControlName="name" value="{{customer.name}}"></td>
+    </tr>
+    <tr>
+      <td>Birthday:</td>
+      <td><input type="date" formControlName="dob" value="{{customer.dob}}"></td>
+    </tr>
+    <tr>
+      <td>Phone:</td>
+      <td><input type="text" formControlName="phone" value="{{customer.phone}}"></td>
+    </tr>
+    <tr>
+      <td>Customer type:</td>
+      <td>
+        <select formControlName="customerType" [compareWith]="compareFn">
+          <option *ngFor="let customerType of customerTypes"
+                  [ngValue]="customerType">{{customerType.name}}</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><button>Update</button></td>
+    </tr>
+  </table>
+</form>

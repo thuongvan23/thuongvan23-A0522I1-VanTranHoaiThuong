@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Product } from '../model/product';
 
 @Injectable({
@@ -6,58 +8,33 @@ import { Product } from '../model/product';
 })
 export class ProductService {
 
-  products: Product[] = [{
-    id: 1,
-    name: 'IPhone 12',
-    price: 2400000,
-    description: 'New'
-  }, {
-    id: 2,
-    name: 'IPhone 11',
-    price: 1560000,
-    description: 'Like new'
-  }, {
-    id: 3,
-    name: 'IPhone X',
-    price: 968000,
-    description: '97%'
-  }, {
-    id: 4,
-    name: 'IPhone 8',
-    price: 7540000,
-    description: '98%'
-  }, {
-    id: 5,
-    name: 'IPhone 11 Pro',
-    price: 1895000,
-    description: 'Like new'
-  }];
+  constructor(private httpClient: HttpClient) { }
 
-  constructor() { }
-
-  getAll() {
-    return this.products;
+  getAll(): Observable<Product[]> {
+    return this.httpClient.get<Product[]>("http://localhost:3000/products");
   }
 
-  saveProduct(product) {
-    this.products.push(product);  
+  saveProduct(product): Observable<any> {
+    return this.httpClient.post<any>("http://localhost:3000/products", product); 
   }
 
-  findById(id: number): Product{
-    return this.products.filter(p => p.id === id)[0];
+  findById(id: number): Observable<Product>{
+    return this.httpClient.get<Product>("http://localhost:3000/products/"+id);
   }
 
-  updateById(id, product: Product){
-    if (this.findById(id) != null){
-      this.findById(id).name = product.name;
-      this.findById(id).price = product.price;
-      this.findById(id).description = product.description;
-    }
+  deleteProduct(id): Observable<any>{
+    return this.httpClient.delete<Product[]>("http://localhost:3000/products/"+id)
   }
 
-  deleteProduct(id){
-    this.products = this.products.filter(product => {
-      return product.id !== id;
-    });   
+  updateProduct(id: number, product: Product): Observable<Product[]>{
+    return this.httpClient.put<Product[]>("http://localhost:3000/products/"+id, product);
+  }
+
+  findByCategory(categoryName: string): Observable<Product[]>{
+    return this.httpClient.get<Product[]>("http://localhost:3000/products?category.categoryName_like="+categoryName)
+  }
+
+  findByTextExis(searchInput: string): Observable<Product[]>{
+    return this.httpClient.get<Product[]>("http://localhost:3000/products?q="+searchInput)
   }
 }
